@@ -1,0 +1,239 @@
+body{
+    font-family: 'Catamaran' !important;
+    input,
+    button{
+        &:focus{
+            outline: none !important;
+            box-shadow: none !important;
+        }
+    }
+}
+@media (min-width: 200px) {
+    .achsHeader{
+        *{
+            transition: all .2s ease-in-out;
+        }
+        &__top-bar{
+            background-color: #EAEADE;
+            &-menus{
+                button{
+                    color: #555;
+                    border: none;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &:active{
+                        border: none;
+                    }
+                }
+                a{
+                    color: #373737;
+                    text-decoration: none;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                    display: flex;
+                    height: 100%;
+                    img{
+                        height: 18px;
+                        margin-right: 4px;
+                    }
+                    strong{
+                        margin-left: 4px;
+                    }
+                }
+                .modal-nosotros{
+                    .modal-dialog{
+                        top: 36px;
+                        left: 0;
+                        margin: 0;
+                        width: 50%;
+                        &::after{
+                            content: '';
+                            width: 1px;
+                            height: 36px;
+                            position: absolute;
+                            right: 0;
+                            top: -36px;
+                            background-color: #999;
+                        }
+                        .modal-content{
+                            border: none !important;
+                            border-radius: 0 0 8px 0;
+                            ul{
+                                list-style: none;
+                                padding-left: 0;
+                                li{
+                                    a{
+                                        color: #555;
+                                        text-decoration: none;
+                                        padding: 15px;
+                                        display: block;
+                                        border-bottom: 1px solid #e1e1e1;
+                                    }
+                                    &:last-child{
+                                        a{
+                                            border-bottom: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .modal-accesibilidad{
+                    > .container{
+                        max-width: 400px;
+                        .modal-dialog{
+                            top: 50px;
+                            &::after{
+                                content: '';
+                                width: 30px;
+                                height: 22px;
+                                position: absolute;
+                                right: 22px;
+                                top: -22px;
+                                background-color: #fff;
+                                clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                            }
+                            .modal-content{
+                                border-radius: 24px;
+                                border-top-right-radius: 0;
+                            }
+                        }
+                    }
+                    h5{
+                        color: var(--bs-gray);
+                    }
+                    button{
+                        background-color: transparent;
+                        border: 3px solid #5e5e5e;
+                        border-radius: 8px;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        width: 100%;
+                        span{
+                            letter-spacing: 1px;
+                        }
+                        &:hover{
+                            border-color: #8C73FF;
+                            h5,
+                            figure,
+                            span{
+                                color: #8C73FF;
+                                svg{
+                                    circle,
+                                    path{
+                                        fill: #8C73FF;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &__lowContrast,
+                    &__highContrast{
+                        figure{
+                            svg{
+                                width: 24px;
+                                circle,
+                                path{
+                                    fill: #5e5e5e;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__menu{
+            .navbar-toggler{
+                height: 80px;
+                position: absolute;
+                right: 0;
+                border-radius: 0;
+                background-color: #8c73ff;
+                top: 0;
+            }
+            .navbar-servicios{
+                .nav-link{
+                    color: rgba(55, 55, 55, 0.8);
+                    text-transform: uppercase;
+                    &-search{
+                        &::after{
+                            display: none;
+                        }
+                    }
+                    ~ .dropdown-menu.dropdown-search{
+                        background-color: #8C73FF;
+                        position: fixed;
+                        top: 118px;
+                        width: 100%;
+                        .input-group{
+                            img{
+                                left: 10px;
+                                position: absolute;
+                                top: 10px;
+                            }
+                            input{
+                                border: none;
+                                padding: 10px 15px 10px 40px;
+                            }
+                        }
+                        button{
+                            border: none;
+                            box-shadow: 2px 2px 10px 0 rgba(40,40,40,0.4);
+                            color: #8C73FF;
+                            display: flex;
+                            height: 100%;
+                            justify-content: center;
+                            align-items: center;
+                            font-weight: bold;
+                            font-size: 18px;
+                        }
+                    }
+                    &-cotizar{
+                        color: white;
+                        background-color: #614BF9;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+    .achsHeader{
+        &__top-bar{
+            &-menus{
+                button{
+                    width: max-content;
+                }
+                .modal-nosotros{
+                    .modal-dialog{
+                        left: initial;
+                        width: initial;
+                        .modal-content{
+                            border-radius: 0 0 8px 8px;
+                        }
+                    }
+                }
+                .modal-accesibilidad{
+                    > .container{
+                        height: 100%;
+                        max-width: 450px;
+                        .modal-dialog{
+                            top: initial;
+                            &::after{
+                                display: none;
+                            }
+                            .modal-content{
+                                border-top-right-radius: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
