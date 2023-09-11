@@ -65,10 +65,15 @@ body{
                         outline: 0;
                     }
                 }
-                
                 .navbar-nav{
                     .nav-item{
                         .nav-link{
+                            &-empresa{
+                                &.show{
+                                    background-color: #fff;
+                                    top: -37px;
+                                }
+                            }
                             &.dropdown-toggle{
                                 &.show{
                                     font-weight: bold;
@@ -106,11 +111,27 @@ body{
                                         padding: 10px 0 10px 20px;
                                     }
                                 }
-                                &.show{
+                                &.dropdown-trabajadores{
                                     position: absolute;
-                                    top: 128px;
                                     width: 95%;
-                                    left: 15px;
+                                    left: 100%;
+                                    top: 128px;
+                                    display: block;
+                                    &.show{
+                                        left: 15px;
+                                        
+                                    }
+                                }
+                                &.dropdown-empresas{
+                                    position: absolute;
+                                    width: 95%;
+                                    left: 100%;
+                                    top: 128px;
+                                    display: block;
+                                    &.show{
+                                        left: 15px;
+                                        
+                                    }
                                 }
                             }
                         }
@@ -439,6 +460,15 @@ body{
                             }
                         }
                     }
+                    &-search,
+                    &-sumate,
+                    &-ingresa{
+                        &:hover{
+                            &::before{
+                                display: none;
+                            }
+                        }
+                    }
                     &.dropdown-toggle{
                         &.show{
                             &::before{
@@ -461,7 +491,8 @@ body{
                             display: none;
                         }
                     }
-                    ~ .dropdown-menu.dropdown-trabajadores{
+                    ~ .dropdown-menu.dropdown-trabajadores,
+                    ~ .dropdown-menu.dropdown-empresas{
                         left:0;
                         right:0;
                         width:100%;
@@ -508,9 +539,8 @@ body{
                         background-color: #13C045;
                         border: none;
                         border-radius: 0;
-                        position: fixed;
-                        top: 114px;
                         width: 100%;
+                        margin: 0;
                         .input-group{
                             img{
                                 left: 10px;
@@ -536,6 +566,21 @@ body{
                                 background-color: #004C14;
                                 color: white;
                             }
+                        }
+                        &::before,
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            width: 100%;
+                            background-color: #13C045;
+                            height: 100%;
+                        }
+                        &::before{
+                            right: -100%;
+                        }
+                        &::after{
+                            left: -100%;
                         }
                     }
                     &-sumate{
@@ -631,7 +676,8 @@ body{
         &__menu{
             .navbar-achscl{
                 .nav-link{
-                    ~ .dropdown-menu.dropdown-trabajadores{
+                    ~ .dropdown-menu.dropdown-trabajadores,
+                    ~ .dropdown-menu.dropdown-empresas{
                         .col-megamenu{
                             padding-left: 30px;
                             position: relative;
@@ -658,6 +704,11 @@ body{
                                     color: #13C045;
                                 }
                             }
+                            &.after-none{
+                                &::after{
+                                    display: none;
+                                }
+                            }
                         }
                         &::before,
                         &::after{
@@ -674,6 +725,17 @@ body{
                         }
                         &::after{
                             left: 100%;
+                        }
+                    }
+                    &:hover{
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            bottom: -23px;
+                            left: 0;
+                            width: 100%;
+                            background-color: #13C045;
+                            height: 3px;
                         }
                     }
                 }

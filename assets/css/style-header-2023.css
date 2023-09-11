@@ -63,6 +63,10 @@ body section {
     box-shadow: none;
     outline: 0;
   }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link-empresa.show {
+    background-color: #fff;
+    top: -37px;
+  }
   .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link.dropdown-toggle.show {
     font-weight: bold;
   }
@@ -95,10 +99,24 @@ body section {
     font-size: 17px;
     padding: 10px 0 10px 20px;
   }
-  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.show {
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-trabajadores {
     position: absolute;
-    top: 128px;
     width: 95%;
+    left: 100%;
+    top: 128px;
+    display: block;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-trabajadores.show {
+    left: 15px;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-empresas {
+    position: absolute;
+    width: 95%;
+    left: 100%;
+    top: 128px;
+    display: block;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-empresas.show {
     left: 15px;
   }
   .achsHeader__menu .navbar-collapse .navbar-nav .nav-item-sumate {
@@ -389,6 +407,9 @@ body section {
   .achsHeader__menu .navbar-achscl .nav-link-search.show img {
     transform: none !important;
   }
+  .achsHeader__menu .navbar-achscl .nav-link-search:hover::before, .achsHeader__menu .navbar-achscl .nav-link-sumate:hover::before, .achsHeader__menu .navbar-achscl .nav-link-ingresa:hover::before {
+    display: none;
+  }
   .achsHeader__menu .navbar-achscl .nav-link.dropdown-toggle.show::before {
     content: "";
     position: absolute;
@@ -404,7 +425,8 @@ body section {
   .achsHeader__menu .navbar-achscl .nav-link.dropdown-toggle::after, .achsHeader__menu .navbar-achscl .nav-link-search::after {
     display: none;
   }
-  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores {
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas {
     left: 0;
     right: 0;
     width: 100%;
@@ -413,24 +435,29 @@ body section {
     border-bottom: 3px solid #13C045;
     border-radius: 0;
   }
-  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores a {
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores a,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas a {
     text-decoration: none;
   }
-  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu {
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu {
     padding-left: 0;
     position: relative;
   }
-  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu a {
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu a,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu a {
     position: relative;
   }
-  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__title {
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__title,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu__title {
     display: block;
     color: #004C14;
     font-weight: 600;
     margin-bottom: 10px;
     padding: 5px 0;
   }
-  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__title::after {
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__title::after,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu__title::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -439,10 +466,12 @@ body section {
     background-color: #7EFF45;
     height: 3px;
   }
-  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__title ~ .collapse:not(.show) {
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__title ~ .collapse:not(.show),
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu__title ~ .collapse:not(.show) {
     display: none;
   }
-  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__link {
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__link,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu__link {
     color: #666;
     font-size: 15px;
     padding: 5px 0;
@@ -451,9 +480,8 @@ body section {
     background-color: #13C045;
     border: none;
     border-radius: 0;
-    position: fixed;
-    top: 114px;
     width: 100%;
+    margin: 0;
   }
   .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-search .input-group img {
     left: 10px;
@@ -478,6 +506,20 @@ body section {
   .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-search button:hover {
     background-color: #004C14;
     color: white;
+  }
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-search::before, .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-search::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #13C045;
+    height: 100%;
+  }
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-search::before {
+    right: -100%;
+  }
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-search::after {
+    left: -100%;
   }
   .achsHeader__menu .navbar-achscl .nav-link-sumate {
     color: white;
@@ -551,11 +593,14 @@ body section {
   .achsHeaderServicios .modal-accesibilidad > .container .modal-dialog .modal-content {
     border-top-right-radius: 24px;
   }
-  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu {
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu {
     padding-left: 30px;
     position: relative;
   }
-  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu:first-child::after, .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu:last-child::after {
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu:first-child::after, .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu:last-child::after,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu:first-child::after,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu:last-child::after {
     content: "";
     position: absolute;
     top: 0;
@@ -564,16 +609,25 @@ body section {
     background-color: #eaeade;
     height: 100%;
   }
-  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__title {
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__title,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu__title {
     pointer-events: none;
   }
-  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__title ~ .collapse:not(.show) {
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__title ~ .collapse:not(.show),
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu__title ~ .collapse:not(.show) {
     display: block;
   }
-  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__link:hover {
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__link:hover,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu__link:hover {
     color: #13C045;
   }
-  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores::before, .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores::after {
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu.after-none::after,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu.after-none::after {
+    display: none;
+  }
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores::before, .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores::after,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas::before,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas::after {
     content: "";
     position: absolute;
     top: -4px;
@@ -582,10 +636,21 @@ body section {
     height: 102%;
     border-bottom: 3px solid #13C045;
   }
-  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores::before {
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores::before,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas::before {
     right: 100%;
   }
-  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores::after {
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores::after,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas::after {
     left: 100%;
+  }
+  .achsHeader__menu .navbar-achscl .nav-link:hover::before {
+    content: "";
+    position: absolute;
+    bottom: -23px;
+    left: 0;
+    width: 100%;
+    background-color: #13C045;
+    height: 3px;
   }
 }/*# sourceMappingURL=style-header-2023.css.map */
