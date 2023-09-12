@@ -211,17 +211,16 @@
                         </button>
                         <div class="collapse navbar-collapse navbar-achscl flex-row-reverse" id="navbarNavDropdown">
                             <div class="input-search-mobile d-lg-none d-flex mb-4">
-                                <div class="input-group">
-                                    <img src="assets/images/achscl/icon-search.png" alt="">
-                                    <input type="text" class="rounded w-100" placeholder="¿Qué estas buscando?">
-                                </div>
                                 <button class="nav-link-mobile-close d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
                                     +
                                 </button>
                             </div>
-                            <ul class="navbar-nav">
+                            <ul class="navbar-nav align-items-lg-center">
                                 <li class="nav-item">
-                                    <a class="nav-link nav-link-trabajadores dropdown-toggle px-3" href="#" data-bs-toggle="dropdown">
+                                    <a class="nav-link nav-link-trabajadores dropdown-toggle p-3" href="#" data-bs-toggle="dropdown">
+                                        <figure class="d-inline mb-0">
+                                            <img class="d-lg-none" src="assets/images/achscl/icon-workers.png" alt="">
+                                        </figure>
                                         Trabajadores
                                         <img class="ms-1" src="assets/images/achscl/icon-chevron.png" alt="">
                                     </a>
@@ -334,15 +333,18 @@
                                         </div>
                                         <div class="row pt-lg-4">
                                             <div class="col-12">
-                                                <a class="col-megamenu__link d-none d-lg-block py-3" href="#">
+                                                <a class="col-megamenu__link col-megamenu__link-all d-block text-end text-lg-start py-3" href="#">
                                                     Ir a trabajadores
                                                 </a>
                                             </div>
                                         </div>
-                                    </div> <!-- dropdown-mega-menu.// -->
+                                    </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link nav-link-empresa dropdown-toggle px-3" href="#" data-bs-toggle="dropdown">
+                                    <a class="nav-link nav-link-empresa dropdown-toggle p-3" href="#" data-bs-toggle="dropdown">
+                                        <figure class="d-inline mb-0">
+                                            <img class="d-lg-none" src="assets/images/achscl/icon-business.png" alt="">
+                                        </figure>
                                         Empresas
                                         <img class="ms-1" src="assets/images/achscl/icon-chevron.png" alt="">
                                     </a>
@@ -423,21 +425,31 @@
                                         </div>
                                         <div class="row pt-lg-4">
                                             <div class="col-12">
-                                                <a class="col-megamenu__link d-none d-lg-block py-3" href="#">
+                                                <a class="col-megamenu__link col-megamenu__link-all d-block text-end text-lg-start py-3" href="#">
                                                     Ir a empresas
                                                 </a>
                                             </div>
                                         </div>
-                                    </div> <!-- dropdown-mega-menu.// -->
+                                    </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link px-3" href="#">Sedes</a>
+                                    <a class="nav-link p-3" href="#">
+                                        <figure class="d-inline mb-0">
+                                            <img class="d-lg-none" src="assets/images/achscl/icon-map.png" alt="">
+                                        </figure>
+                                        Sedes
+                                    </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link px-3" href="#">En caso de accidente</a>
+                                    <a class="nav-link p-3" href="#">
+                                        <figure class="d-inline mb-0">
+                                            <img class="d-lg-none" src="assets/images/achscl/icon-warning.png" alt="">
+                                        </figure>
+                                        En caso de accidente
+                                    </a>
                                 </li>
-                                <li class="nav-item d-none d-lg-block">
-                                    <a class="nav-link nav-link-search dropdown-toggle px-3" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                <li class="nav-item">
+                                    <a class="nav-link nav-link-search dropdown-toggle p-3 d-none d-lg-flex" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                                         <img src="assets/images/achscl/icon-search.png" alt="" width="20px" height="20px">
                                     </a>
                                     <div class="dropdown-menu dropdown-search py-3" role="menu">
@@ -449,7 +461,7 @@
                                                         <input type="text" class="rounded w-100" placeholder="¿Qué estas buscando?">
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-lg-2">
+                                                <div class="col-12 col-lg-2 d-none d-lg-block">
                                                     <button type="submit" class="rounded w-100">
                                                         Buscar
                                                     </button>

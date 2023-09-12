@@ -28,25 +28,12 @@ body section {
     top: -36px;
   }
   .achsHeader__menu .navbar-collapse .input-search-mobile {
-    align-items: center;
-  }
-  .achsHeader__menu .navbar-collapse .input-search-mobile .input-group {
-    background-color: #E6F7E4;
-    border: 1px solid #13C045;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-right: 15px;
-  }
-  .achsHeader__menu .navbar-collapse .input-search-mobile .input-group img {
-    left: 10px;
-    position: absolute;
-    top: 10px;
-  }
-  .achsHeader__menu .navbar-collapse .input-search-mobile .input-group input {
-    background-color: transparent !important;
-    width: 90%;
-    border: none;
-    padding: 8px 10px 8px 40px;
+    width: 30px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    left: 94%;
+    position: relative;
+    z-index: 1001;
   }
   .achsHeader__menu .navbar-collapse .input-search-mobile .nav-link-mobile-close {
     display: flex;
@@ -65,10 +52,11 @@ body section {
   }
   .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link-empresa.show {
     background-color: #fff;
-    top: -37px;
+    top: -57px;
   }
   .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link.dropdown-toggle.show {
     font-weight: bold;
+    padding-left: 26px !important;
   }
   .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link.dropdown-toggle.show::before {
     bottom: -10px;
@@ -78,6 +66,12 @@ body section {
     right: 0;
     margin: auto;
     background-color: #004C14;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link.dropdown-toggle.show > img {
+    transform: rotate(90deg);
+    position: absolute;
+    top: 45%;
+    left: 0;
   }
   .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu {
     border-bottom: 0;
@@ -99,11 +93,23 @@ body section {
     font-size: 17px;
     padding: 10px 0 10px 20px;
   }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu .col-megamenu__link-all {
+    color: #13C045;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-search {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+  }
   .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-trabajadores {
     position: absolute;
     width: 95%;
     left: 100%;
-    top: 128px;
+    top: 147px;
     display: block;
   }
   .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-trabajadores.show {
@@ -113,7 +119,7 @@ body section {
     position: absolute;
     width: 95%;
     left: 100%;
-    top: 128px;
+    top: 147px;
     display: block;
   }
   .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-empresas.show {
@@ -213,6 +219,7 @@ body section {
   }
   .achsHeaderCorporativo .achsHeader__menu .navbar-toggler {
     background-color: #13C045;
+    border-color: #13C045;
   }
   .achsHeaderCorporativo .modal-accesibilidad > .container {
     max-width: 400px;
@@ -419,7 +426,7 @@ body section {
     background-color: #13C045;
     height: 3px;
   }
-  .achsHeader__menu .navbar-achscl .nav-link.dropdown-toggle.show img {
+  .achsHeader__menu .navbar-achscl .nav-link.dropdown-toggle.show > img {
     transform: rotate(180deg);
   }
   .achsHeader__menu .navbar-achscl .nav-link.dropdown-toggle::after, .achsHeader__menu .navbar-achscl .nav-link-search::after {
@@ -477,11 +484,18 @@ body section {
     padding: 5px 0;
   }
   .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-search {
-    background-color: #13C045;
     border: none;
     border-radius: 0;
     width: 100%;
     margin: 0;
+  }
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-search .input-group {
+    background-color: #E6F7E4;
+    border: 1px solid #13C045;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 15px;
+    width: 90%;
   }
   .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-search .input-group img {
     left: 10px;
@@ -489,6 +503,7 @@ body section {
     top: 10px;
   }
   .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-search .input-group input {
+    background-color: transparent;
     border: none;
     padding: 10px 15px 10px 40px;
   }
@@ -512,7 +527,7 @@ body section {
     position: absolute;
     top: 0;
     width: 100%;
-    background-color: #13C045;
+    background-color: white;
     height: 100%;
   }
   .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-search::before {
@@ -566,6 +581,23 @@ body section {
     background-color: #004C14;
     border-color: #004C14;
     color: white;
+  }
+}
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .achsHeader__menu .navbar-collapse.show::before, .achsHeader__menu .navbar-collapse.show::after {
+    content: "";
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    position: absolute;
+    z-index: 1000;
+  }
+  .achsHeader__menu .navbar-collapse.show::before {
+    left: -100%;
+  }
+  .achsHeader__menu .navbar-collapse.show::after {
+    right: -100%;
   }
 }
 @media (min-width: 992px) {
@@ -647,10 +679,23 @@ body section {
   .achsHeader__menu .navbar-achscl .nav-link:hover::before {
     content: "";
     position: absolute;
-    bottom: -23px;
+    bottom: -13px;
     left: 0;
     width: 100%;
     background-color: #13C045;
     height: 3px;
+  }
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-search {
+    background-color: #13C045;
+  }
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-search .input-group {
+    background-color: white;
+    width: 100%;
+  }
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-search .input-group input {
+    border: none;
+  }
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-search::after, .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-search::before {
+    background-color: #13C045;
   }
 }/*# sourceMappingURL=style-header-2023.css.map */
