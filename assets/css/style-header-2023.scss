@@ -691,6 +691,36 @@ body{
             }
         }
     }
+    .offcanvas-ingreso{
+        .nav-link{
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            &-virtual{
+                background-color: #13C045;
+                border: 2px solid #13C045;
+                color: white;
+            }
+            &-gestion{
+                background-color: white;
+                border: 2px solid #27933E;
+                color: #27933E;
+                &:hover{
+                    img{
+                        filter: brightness(200);
+                    }
+                }
+            }
+            img{
+                vertical-align: -5px;
+            }
+            &:hover{
+                background-color: #004C14;
+                border-color: #004C14;
+                color: white;
+            }
+        }
+    }
 }
 @media (min-width: 576px) and (max-width: 991.98px) {
     .achsHeader{
