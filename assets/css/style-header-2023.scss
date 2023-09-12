@@ -46,10 +46,24 @@ body{
                         transform: rotate(45deg);
                         font-size: 27px;
                         font-weight: bold;
-                        color: #13C045;
-                        border: 3px solid #13C045;
                         box-shadow: none;
                         outline: 0;
+                    }
+                }
+                &.navbar-servicios{
+                    .input-search-mobile{
+                        .nav-link-mobile-close{
+                            color: #8C73FF;
+                            border: 3px solid #8C73FF;
+                        }
+                    }
+                }
+                &.navbar-achscl{
+                    .input-search-mobile{
+                        .nav-link-mobile-close{
+                            color: #13C045;
+                            border: 3px solid #13C045;
+                        }
                     }
                 }
                 .navbar-nav{
@@ -401,25 +415,58 @@ body{
                     color: rgba(55, 55, 55, 0.8);
                     font-size: 14px;
                     text-transform: uppercase;
+                    position: relative;
+                    &-search{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        &.show{
+                            -webkit-box-shadow: 0px 0px 0px 1px #8C73FF;
+                            -moz-box-shadow: 0px 0px 0px 1px #8C73FF;
+                            box-shadow: 0px 0px 0px 1px #8C73FF;
+                            &::before{
+                                display: none;
+                            }
+                            img{
+                                transform: none !important;
+                            }
+                        }
+                    }
+                    &-search,
+                    &-cotizar{
+                        &:hover{
+                            &::before{
+                                display: none;
+                            }
+                        }
+                    }
                     &-search{
                         &::after{
                             display: none;
                         }
                     }
                     ~ .dropdown-menu.dropdown-search{
-                        background-color: #8C73FF;
                         border: none;
                         border-radius: 0;
-                        position: fixed;
-                        top: 114px;
                         width: 100%;
+                        margin: 0;
                         .input-group{
+                            background-color: #E6F7E4;
+                            border: 1px solid #8C73FF;
+                            border-radius: 8px;
+                            overflow: hidden;
+                            margin-right: 15px;
+                            width: 90%;
                             img{
                                 left: 10px;
                                 position: absolute;
                                 top: 10px;
                             }
                             input{
+                                background-color: transparent;
                                 border: none;
                                 padding: 10px 15px 10px 40px;
                             }
@@ -434,11 +481,35 @@ body{
                             align-items: center;
                             font-weight: bold;
                             font-size: 18px;
+                            &:hover{
+                                background-color: #004C14;
+                                color: white;
+                            }
+                        }
+                        &::before,
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            width: 100%;
+                            background-color: white;
+                            height: 100%;
+                        }
+                        &::before{
+                            right: -100%;
+                        }
+                        &::after{
+                            left: -100%;
                         }
                     }
                     &-cotizar{
                         color: white;
                         background-color: #614BF9;
+                        border: 2px solid #614BF9;
+                        &:hover{
+                            background-color: #8C73FF;
+                            border-color: #8C73FF;
+                        }
                     }
                 }
             }
@@ -620,36 +691,6 @@ body{
             }
         }
     }
-    .offcanvas-ingreso{
-        .nav-link{
-            font-weight: bold;
-            text-align: center;
-            padding: 10px;
-            &-virtual{
-                background-color: #13C045;
-                border: 2px solid #13C045;
-                color: white;
-            }
-            &-gestion{
-                background-color: white;
-                border: 2px solid #27933E;
-                color: #27933E;
-                &:hover{
-                    img{
-                        filter: brightness(200);
-                    }
-                }
-            }
-            img{
-                vertical-align: -5px;
-            }
-            &:hover{
-                background-color: #004C14;
-                border-color: #004C14;
-                color: white;
-            }
-        }
-    }
 }
 @media (min-width: 576px) and (max-width: 991.98px) {
     .achsHeader{
@@ -713,6 +754,35 @@ body{
             }
         }
         &__menu{
+            .navbar-servicios{
+                .nav-link{
+                    &:hover{
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            bottom: -13px;
+                            left: 0;
+                            width: 100%;
+                            background-color: #8C73FF;
+                            height: 3px;
+                        }
+                    }
+                    ~ .dropdown-menu.dropdown-search{
+                        background-color: #8C73FF;
+                        .input-group{
+                            background-color: white;
+                            width: 100%;
+                            input{
+                                border: none;
+                            }
+                        }
+                        &::after,
+                        &::before{
+                            background-color: #8C73FF;
+                        }
+                    }
+                }
+            }
             .navbar-achscl{
                 .nav-link{
                     ~ .dropdown-menu.dropdown-trabajadores,

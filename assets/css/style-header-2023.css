@@ -45,10 +45,16 @@ body section {
     transform: rotate(45deg);
     font-size: 27px;
     font-weight: bold;
-    color: #13C045;
-    border: 3px solid #13C045;
     box-shadow: none;
     outline: 0;
+  }
+  .achsHeader__menu .navbar-collapse.navbar-servicios .input-search-mobile .nav-link-mobile-close {
+    color: #8C73FF;
+    border: 3px solid #8C73FF;
+  }
+  .achsHeader__menu .navbar-collapse.navbar-achscl .input-search-mobile .nav-link-mobile-close {
+    color: #13C045;
+    border: 3px solid #13C045;
   }
   .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link-empresa.show {
     background-color: #fff;
@@ -355,17 +361,44 @@ body section {
     color: rgba(55, 55, 55, 0.8);
     font-size: 14px;
     text-transform: uppercase;
+    position: relative;
+  }
+  .achsHeader__menu .navbar-servicios .nav-link-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .achsHeader__menu .navbar-servicios .nav-link-search.show {
+    box-shadow: 0px 0px 0px 1px #8C73FF;
+  }
+  .achsHeader__menu .navbar-servicios .nav-link-search.show::before {
+    display: none;
+  }
+  .achsHeader__menu .navbar-servicios .nav-link-search.show img {
+    transform: none !important;
+  }
+  .achsHeader__menu .navbar-servicios .nav-link-search:hover::before, .achsHeader__menu .navbar-servicios .nav-link-cotizar:hover::before {
+    display: none;
   }
   .achsHeader__menu .navbar-servicios .nav-link-search::after {
     display: none;
   }
   .achsHeader__menu .navbar-servicios .nav-link ~ .dropdown-menu.dropdown-search {
-    background-color: #8C73FF;
     border: none;
     border-radius: 0;
-    position: fixed;
-    top: 114px;
     width: 100%;
+    margin: 0;
+  }
+  .achsHeader__menu .navbar-servicios .nav-link ~ .dropdown-menu.dropdown-search .input-group {
+    background-color: #E6F7E4;
+    border: 1px solid #8C73FF;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 15px;
+    width: 90%;
   }
   .achsHeader__menu .navbar-servicios .nav-link ~ .dropdown-menu.dropdown-search .input-group img {
     left: 10px;
@@ -373,6 +406,7 @@ body section {
     top: 10px;
   }
   .achsHeader__menu .navbar-servicios .nav-link ~ .dropdown-menu.dropdown-search .input-group input {
+    background-color: transparent;
     border: none;
     padding: 10px 15px 10px 40px;
   }
@@ -387,9 +421,32 @@ body section {
     font-weight: bold;
     font-size: 18px;
   }
+  .achsHeader__menu .navbar-servicios .nav-link ~ .dropdown-menu.dropdown-search button:hover {
+    background-color: #004C14;
+    color: white;
+  }
+  .achsHeader__menu .navbar-servicios .nav-link ~ .dropdown-menu.dropdown-search::before, .achsHeader__menu .navbar-servicios .nav-link ~ .dropdown-menu.dropdown-search::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    height: 100%;
+  }
+  .achsHeader__menu .navbar-servicios .nav-link ~ .dropdown-menu.dropdown-search::before {
+    right: -100%;
+  }
+  .achsHeader__menu .navbar-servicios .nav-link ~ .dropdown-menu.dropdown-search::after {
+    left: -100%;
+  }
   .achsHeader__menu .navbar-servicios .nav-link-cotizar {
     color: white;
     background-color: #614BF9;
+    border: 2px solid #614BF9;
+  }
+  .achsHeader__menu .navbar-servicios .nav-link-cotizar:hover {
+    background-color: #8C73FF;
+    border-color: #8C73FF;
   }
   .achsHeader__menu .navbar-achscl .nav-link {
     color: rgba(55, 55, 55, 0.8);
@@ -556,32 +613,6 @@ body section {
   .achsHeader__menu .navbar-achscl .nav-link-ingresa:hover img {
     filter: brightness(0) invert(1);
   }
-  .offcanvas-ingreso .nav-link {
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-  }
-  .offcanvas-ingreso .nav-link-virtual {
-    background-color: #13C045;
-    border: 2px solid #13C045;
-    color: white;
-  }
-  .offcanvas-ingreso .nav-link-gestion {
-    background-color: white;
-    border: 2px solid #27933E;
-    color: #27933E;
-  }
-  .offcanvas-ingreso .nav-link-gestion:hover img {
-    filter: brightness(200);
-  }
-  .offcanvas-ingreso .nav-link img {
-    vertical-align: -5px;
-  }
-  .offcanvas-ingreso .nav-link:hover {
-    background-color: #004C14;
-    border-color: #004C14;
-    color: white;
-  }
 }
 @media (min-width: 576px) and (max-width: 991.98px) {
   .achsHeader__menu .navbar-collapse.show::before, .achsHeader__menu .navbar-collapse.show::after {
@@ -624,6 +655,28 @@ body section {
   }
   .achsHeaderServicios .modal-accesibilidad > .container .modal-dialog .modal-content {
     border-top-right-radius: 24px;
+  }
+  .achsHeader__menu .navbar-servicios .nav-link:hover::before {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+    width: 100%;
+    background-color: #8C73FF;
+    height: 3px;
+  }
+  .achsHeader__menu .navbar-servicios .nav-link ~ .dropdown-menu.dropdown-search {
+    background-color: #8C73FF;
+  }
+  .achsHeader__menu .navbar-servicios .nav-link ~ .dropdown-menu.dropdown-search .input-group {
+    background-color: white;
+    width: 100%;
+  }
+  .achsHeader__menu .navbar-servicios .nav-link ~ .dropdown-menu.dropdown-search .input-group input {
+    border: none;
+  }
+  .achsHeader__menu .navbar-servicios .nav-link ~ .dropdown-menu.dropdown-search::after, .achsHeader__menu .navbar-servicios .nav-link ~ .dropdown-menu.dropdown-search::before {
+    background-color: #8C73FF;
   }
   .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu,
   .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu {
