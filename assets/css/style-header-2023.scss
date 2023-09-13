@@ -155,7 +155,8 @@ body{
                                 }
                             }
                         }
-                        &-sumate{
+                        &-sumate,
+                        &-cotizar{
                             position: absolute;
                             bottom: 15px;
                             width: 90%;
@@ -552,11 +553,12 @@ body{
                             &::before{
                                 content: '';
                                 position: absolute;
-                                bottom: -23px;
+                                bottom: -13px;
                                 left: 0;
                                 width: 100%;
                                 background-color: #13C045;
                                 height: 3px;
+                                z-index: 1001;
                             }
                             > img{
                                 transform: rotate(180deg);
@@ -766,7 +768,8 @@ body{
                 }
             }
         }
-        &Servicios{
+        &Servicios,
+        &Corporativo{
             .modal-accesibilidad{
                 > .container{
                     height: 100%;

@@ -131,7 +131,7 @@ body section {
   .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-empresas.show {
     left: 15px;
   }
-  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item-sumate {
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item-sumate, .achsHeader__menu .navbar-collapse .navbar-nav .nav-item-cotizar {
     position: absolute;
     bottom: 15px;
     width: 90%;
@@ -477,11 +477,12 @@ body section {
   .achsHeader__menu .navbar-achscl .nav-link.dropdown-toggle.show::before {
     content: "";
     position: absolute;
-    bottom: -23px;
+    bottom: -13px;
     left: 0;
     width: 100%;
     background-color: #13C045;
     height: 3px;
+    z-index: 1001;
   }
   .achsHeader__menu .navbar-achscl .nav-link.dropdown-toggle.show > img {
     transform: rotate(180deg);
@@ -669,17 +670,17 @@ body section {
   .achsHeader__top-bar-menus .modal-nosotros .modal-dialog .modal-content {
     border-radius: 0 0 8px 8px;
   }
-  .achsHeaderServicios .modal-accesibilidad > .container {
+  .achsHeaderServicios .modal-accesibilidad > .container, .achsHeaderCorporativo .modal-accesibilidad > .container {
     height: 100%;
     max-width: 450px;
   }
-  .achsHeaderServicios .modal-accesibilidad > .container .modal-dialog {
+  .achsHeaderServicios .modal-accesibilidad > .container .modal-dialog, .achsHeaderCorporativo .modal-accesibilidad > .container .modal-dialog {
     top: initial;
   }
-  .achsHeaderServicios .modal-accesibilidad > .container .modal-dialog::after {
+  .achsHeaderServicios .modal-accesibilidad > .container .modal-dialog::after, .achsHeaderCorporativo .modal-accesibilidad > .container .modal-dialog::after {
     display: none;
   }
-  .achsHeaderServicios .modal-accesibilidad > .container .modal-dialog .modal-content {
+  .achsHeaderServicios .modal-accesibilidad > .container .modal-dialog .modal-content, .achsHeaderCorporativo .modal-accesibilidad > .container .modal-dialog .modal-content {
     border-top-right-radius: 24px;
   }
   .achsHeader__menu .navbar-servicios .nav-link:hover::before {
