@@ -12,6 +12,9 @@ body{
         background-color: #ddd;
         height: 90vh;
     }
+    *{
+        transition: all .2s ease-in-out;
+    }
 }
 @media (max-width: 991.98px){
     .achsHeader{
@@ -30,46 +33,17 @@ body{
                     top: -36px;
                 }
                 .input-search-mobile{
-                    width: 30px;
                     margin-top: 8px;
                     margin-bottom: 16px;
-                    left: 94%;
+                    left: 93%;
                     position: relative;
                     z-index: 1001;
-                    .nav-link-mobile-close{
-                        display: flex;
-                        border-radius: 50%;
-                        width: 30px;
-                        height: 30px;
-                        align-items: center;
-                        justify-content: center;
-                        transform: rotate(45deg);
-                        font-size: 27px;
-                        font-weight: bold;
-                        box-shadow: none;
-                        outline: 0;
-                    }
-                }
-                &.navbar-servicios{
-                    .input-search-mobile{
-                        .nav-link-mobile-close{
-                            color: #8C73FF;
-                            border: 3px solid #8C73FF;
-                        }
-                    }
-                }
-                &.navbar-achscl{
-                    .input-search-mobile{
-                        .nav-link-mobile-close{
-                            color: #13C045;
-                            border: 3px solid #13C045;
-                        }
-                    }
                 }
                 .navbar-nav{
                     .nav-item{
                         .nav-link{
                             &-empresa{
+                                top: 0;
                                 &.show{
                                     background-color: #fff;
                                     top: -57px;
