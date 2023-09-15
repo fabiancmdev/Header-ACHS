@@ -67,8 +67,8 @@
                                         </div>
                                         <div class="col-6 pe-lg-0">
                                             <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
-                                                <img class="d-none" src="assets/images/icon-accesibility.png" alt="">
                                                 <span>
+                                                    <img class="me-1 d-lg-none" src="assets/images/icon-accesibility.png" alt="">
                                                     Accesibilidad
                                                 </span>
                                                 <img class="ms-2" src="assets/images/servicios/icon-chevron.png" alt="">
@@ -82,47 +82,47 @@
                                                                 <div class="container">
                                                                     <div class="row">
                                                                         <div class="col-12">
-                                                                            <h4 class="text-dark fw-bold mb-4">
+                                                                            <h4 class="text-dark fw-bold mb-4 d-lg-none">
                                                                                 Personaliza tu experiencia
                                                                             </h4>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="row">
-                                                                        <div class="col-12">
+                                                                    <div class="row align-items-center">
+                                                                        <div class="col-12 col-lg-6">
                                                                             <h5 class="fw-light">
                                                                                 Tamaño de letra
                                                                             </h5>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="row align-items-center">
-                                                                        <div class="col-6">
+                                                                        <div class="col-6 col-lg-3">
                                                                             <button type="button" class="modal-accesibilidad__fontMinus py-3">
-                                                                                <figure class="mb-2">
+                                                                                <figure class="mb-2 mb-lg-0">
                                                                                     -A
                                                                                 </figure>
-                                                                                <span>
+                                                                                <span class="d-lg-none">
                                                                                     Disminuir
                                                                                 </span>
                                                                             </button>
                                                                         </div>
-                                                                        <div class="col-6">
-                                                                            <button type="button" class="modal-accesibilidad__fontPlus py-4">
-                                                                                <figure class="fs-5 mb-2">
+                                                                        <div class="col-6 col-lg-3">
+                                                                            <button type="button" class="modal-accesibilidad__fontPlus py-4 py-lg-3">
+                                                                                <figure class="fs-5 mb-2 mb-lg-0">
                                                                                     +A
                                                                                 </figure>
-                                                                                <span>
+                                                                                <span class="d-lg-none">
                                                                                     Aumentar
                                                                                 </span>
                                                                             </button>
                                                                         </div>
-                                                                        <div class="col-12 mt-4">
-                                                                            <h5 class="fw-light">
-                                                                                Modo de contraste
+                                                                    </div>
+                                                                    <div class="row align-items-center pt-lg-4">
+                                                                        <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+                                                                            <h5 class="fw-light mb-lg-0">
+                                                                                Modo <span class="d-inline d-lg-none">de contraste</span>
                                                                             </h5>
                                                                         </div>
-                                                                        <div class="col-6">
-                                                                            <button type="button" class="modal-accesibilidad__lowContrast py-4">
-                                                                                <figure class="mb-2">
+                                                                        <div class="col-6 col-lg-3">
+                                                                            <button type="button" class="modal-accesibilidad__lowContrast py-4 py-lg-3">
+                                                                                <figure class="mb-2 mb-lg-0">
                                                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                                                                         <circle cx="1.5" cy="12" r="1.5"/>
                                                                                         <circle cx="12" cy="1.5" r="1.5"/>
@@ -135,31 +135,96 @@
                                                                                         <circle cx="22.5" cy="12" r="1.5"/>
                                                                                     </svg>
                                                                                 </figure>
-                                                                                <span>
+                                                                                <span class="d-lg-none">
                                                                                     Bajo contraste
                                                                                 </span>
                                                                             </button>
                                                                         </div>
-                                                                        <div class="col-6">
-                                                                            <button type="button" class="modal-accesibilidad__highContrast py-4">
-                                                                                <figure class="mb-2">
+                                                                        <div class="col-6 col-lg-3">
+                                                                            <button type="button" class="modal-accesibilidad__highContrast py-4 py-lg-3">
+                                                                                <figure class="mb-2 mb-lg-0">
                                                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                                                                         <path d="M8.39,0C3.52,1.63,0,6.23,0,11.66c0,6.82,5.52,12.34,12.34,12.34,5.43,0,10.03-3.52,11.66-8.39-1.23,.4-2.56,.68-3.95,.68-6.82,0-12.34-5.52-12.34-12.34,0-1.39,.25-2.71,.68-3.95Z"/>
                                                                                     </svg>
                                                                                 </figure>
-                                                                                <span>
+                                                                                <span class="d-lg-none">
                                                                                     Alto contraste
                                                                                 </span>
                                                                             </button>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="row">
+                                                                    <div class="row d-lg-none">
                                                                         <div class="col-12">
                                                                             <button type="button" class="border-0 p-4 w-100 text-center">
                                                                                 <h5 class="mb-0">
                                                                                     Restablecer
                                                                                 </h5>
                                                                             </button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row d-none d-lg-flex">
+                                                                        <div class="col-12">
+                                                                            <a class="toggle-advanced d-block text-lg-end my-3" data-bs-toggle="collapse" href="#collapseAdvanced" role="button" aria-expanded="false" aria-controls="collapseAdvanced">
+                                                                                <h6 class="fs-6">
+                                                                                    Avanzado
+                                                                                </h6>
+                                                                                <h5 class="fs-6">
+                                                                                    Ocultar
+                                                                                </h5>
+                                                                            </a>
+                                                                            <div class="collapse" id="collapseAdvanced">
+                                                                                <div class="row align-items-center justify-content-between">
+                                                                                    <div class="col-6">
+                                                                                        <h5 class="fw-light mb-0">
+                                                                                            Guía de lectura
+                                                                                        </h5>
+                                                                                    </div>
+                                                                                    <div class="col-6 col-lg-2 px-0">
+                                                                                        <button type="button" class="modal-accesibilidad__btnAdvanced border-0 p-3">
+                                                                                            <figure class="mb-2 mb-lg-0">
+                                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 12">
+                                                                                                    <path d="M19.79,5.44c-.64-.8-1.4-1.51-2.17-2.17C15.96,1.87,14.06,.69,11.96,.21c-1.21-.27-2.44-.28-3.66-.05-1.11,.2-2.18,.64-3.18,1.18-1.57,.85-3,2.02-4.25,3.33-.23,.25-.46,.49-.67,.76-.28,.35-.28,.77,0,1.12,.64,.8,1.4,1.51,2.17,2.17,1.66,1.4,3.57,2.58,5.66,3.06,1.21,.27,2.44,.28,3.66,.05,1.11-.21,2.18-.65,3.18-1.19,1.57-.85,3-2.02,4.25-3.33,.23-.24,.46-.49,.67-.75,.11-.12,.18-.27,.21-.44v-.04h0v-.15h0v-.05c-.02-.16-.1-.32-.21-.44Zm-9.78,4.56c-2.21,0-4-1.8-4-4.01S7.8,1.98,10.01,1.98s4,1.8,4,4.01-1.79,4.01-4,4.01Z"/>
+                                                                                                    <path d="M10.01,3.98c-1.1,0-2,.9-2,2.01s.9,2.01,2,2.01,2-.9,2-2.01-.9-2.01-2-2.01Z"/>
+                                                                                                </svg>
+                                                                                            </figure>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row align-items-center justify-content-between">
+                                                                                    <div class="col-6">
+                                                                                        <h5 class="fw-light mb-0">
+                                                                                            Cursor
+                                                                                        </h5>
+                                                                                    </div>
+                                                                                    <div class="col-6 col-lg-2 px-0">
+                                                                                        <button type="button" class="modal-accesibilidad__btnAdvanced border-0 p-3">
+                                                                                            <figure class="mb-2 mb-lg-0">
+                                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 17" class="w-16">
+                                                                                                    <path d="M11,9.63L0,0V14.67s3.56-3.43,3.56-3.43l2.61,5.76,2.52-1.15-2.61-5.76,4.91-.45Z"/>
+                                                                                                </svg>
+                                                                                            </figure>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row align-items-center justify-content-between">
+                                                                                    <div class="col-6">
+                                                                                        <h5 class="fw-light mb-0">
+                                                                                            Resaltar objetos
+                                                                                        </h5>
+                                                                                    </div>
+                                                                                    <div class="col-6 col-lg-2 px-0">
+                                                                                        <button type="button" class="modal-accesibilidad__btnAdvanced border-0 p-3">
+                                                                                            <figure class="mb-2 mb-lg-0">
+                                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                                                                                    <polygon points="0 16 4.41 14.41 1.6 11.62 0 16"/>
+                                                                                                    <path d="M14,0c-.55,0-1.05,.22-1.41,.59l-1.65,1.65,2.83,2.83,1.65-1.65c.36-.37,.58-.87,.58-1.42,0-1.1-.9-2-2-2Z"/>
+                                                                                                    <rect x="2.42" y="6.18" width="10.82" height="4" transform="translate(-3.49 7.93) rotate(-45)"/>
+                                                                                                </svg>
+                                                                                            </figure>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -253,6 +318,27 @@
                                                     </button>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item nav-item-buttons-contact d-lg-none pb-3">
+                                    <div class="row justify-content-center">
+                                        <div class="col-12">
+                                            <h5 class="my-3">
+                                                Datos de contacto
+                                            </h5>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img src="assets/images/servicios/icon-phone.png" alt="" width="20px">
+                                                Call center <strong>600 600 2247</strong>
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img src="assets/images/servicios/icon-rescue.png" alt="" width="20px">
+                                                Rescate <strong>1404</strong>
+                                            </a>
                                         </div>
                                     </div>
                                 </li>
