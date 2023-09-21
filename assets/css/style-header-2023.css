@@ -1182,6 +1182,9 @@ body section {
     -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   }
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-ingresa .nav-link {
+    text-transform: initial;
+  }
   .achsHeader__menu .navbar-servicios .nav-link:hover::before {
     content: "";
     position: absolute;
