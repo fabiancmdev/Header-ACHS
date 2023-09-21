@@ -756,19 +756,19 @@ body{
                     &-ingresa{
                         color: #13C045;
                         border: 2px solid #13C045;
-                        &:hover{
-                            background-color: #13C045;
+                        &.show{
                             color: white;
+                            background-color: #13C045;
+                            &::before{
+                                display: none !important;
+                            }
                             img{
                                 filter: brightness(0) invert(1);
+                                transform: none !important;
                             }
                         }
-                    }
-                    &-reservarht{
-                        color: #348FFF;
-                        border: 2px solid #348FFF;
                         &:hover{
-                            background-color: #348FFF;
+                            background-color: #13C045;
                             color: white;
                             img{
                                 filter: brightness(0) invert(1);
@@ -1048,7 +1048,13 @@ body{
             }
         }
     }
-    .offcanvas-ingreso{
+    .offcanvas-ingreso,
+    .dropdown-menu.dropdown-ingresa{
+        h6{
+            color: #787878;
+            font-size: 17px;
+            font-weight: bold;
+        }
         .nav-link{
             font-weight: bold;
             text-align: center;
@@ -1066,6 +1072,11 @@ body{
                     img{
                         filter: brightness(200);
                     }
+                }
+            }
+            &:hover{
+                &::before{
+                    display: none;
                 }
             }
             img{
@@ -1276,6 +1287,25 @@ body{
                         &::after,
                         &::before{
                             background-color: #13C045;
+                        }
+                    }
+                    ~ .dropdown-menu.dropdown-ingresa{
+                        left: initial;
+                        right: 0;
+                        margin-top: 20px;
+                        border: 0;
+                        max-width: 400px;
+                        width: 100%;
+                        &::after{
+                            content: "";
+                            width: 30px;
+                            height: 20px;
+                            position: absolute;
+                            right: 22px;
+                            top: -20px;
+                            background-color: #fff;
+                            -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
                         }
                     }
                 }
