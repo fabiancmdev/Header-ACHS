@@ -39,6 +39,9 @@ body section {
     position: relative;
     z-index: 1001;
   }
+  .achsHeader__menu .navbar-collapse .nav-link-mobile-close {
+    background-color: #fff;
+  }
   .achsHeader__menu .navbar-collapse .navbar-nav .nav-item {
     border-bottom: 1px solid #eaeade;
   }
