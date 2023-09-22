@@ -267,7 +267,7 @@
                 </div>
                 <nav class="achsHeader__menu navbar navbar-expand-lg py-0 py-lg-2">
                     <div class="container position-relative">
-                        <a class="navbar-brand my-2" href="#">
+                        <a class="navbar-brand my-2 my-lg-0" href="#">
                             <img src="assets/images/ht/logo-ht-new.png" alt="">
                         </a>
                         <button class="navbar-toggler px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -296,7 +296,7 @@
                                                 <!-- Activador  -->
                                                 <a class="col-megamenu__title d-none" data-bs-toggle="collapse" href="#"></a>
                                                 <!-- Fin Activador -->
-                                                <div class="collapse" data-bs-parent="#collapseServiciosClinicos">
+                                                <div class="collapse show" data-bs-parent="#collapseServiciosClinicos">
                                                     <div class="card border-0">
                                                         <a class="col-megamenu__link" href="#">
                                                             Centro de reemplazo articular
@@ -317,19 +317,34 @@
                                                 <!-- Activador  -->
                                                 <a class="col-megamenu__title d-none" data-bs-toggle="collapse" href="#"></a>
                                                 <!-- Fin Activador -->
-                                                <div class="collapse" data-bs-parent="#collapseServiciosClinicos">
+                                                <div class="collapse show" data-bs-parent="#collapseServiciosClinicos">
                                                     <div class="card border-0">
                                                         <a class="col-megamenu__link" href="#">
-                                                            Centro de reemplazo articular
+                                                            Hospitalización
                                                         </a>
                                                         <a class="col-megamenu__link" href="#">
-                                                            Centro de atención ambulatoria
+                                                            Imagenología
                                                         </a>
                                                         <a class="col-megamenu__link" href="#">
-                                                            Consultas médicas
+                                                            Laboratorio
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg col-megamenu">
+                                                <!-- Activador  -->
+                                                <a class="col-megamenu__title d-none" data-bs-toggle="collapse" href="#"></a>
+                                                <!-- Fin Activador -->
+                                                <div class="collapse show" data-bs-parent="#collapseServiciosClinicos">
+                                                    <div class="card border-0">
+                                                        <a class="col-megamenu__link" href="#">
+                                                            Maratonista
                                                         </a>
                                                         <a class="col-megamenu__link" href="#">
-                                                            Consultas médicas menores de 15 años
+                                                            Pabellón quirúrgico
+                                                        </a>
+                                                        <a class="col-megamenu__link" href="#">
+                                                            Pacientes críticos
                                                         </a>
                                                     </div>
                                                 </div>
@@ -341,37 +356,13 @@
                                                 <div class="collapse" data-bs-parent="#collapseServiciosClinicos">
                                                     <div class="card border-0">
                                                         <a class="col-megamenu__link" href="#">
-                                                            Centro de reemplazo articular
+                                                            Procedimientos médicos
                                                         </a>
                                                         <a class="col-megamenu__link" href="#">
-                                                            Centro de atención ambulatoria
+                                                            Rehabilitación
                                                         </a>
                                                         <a class="col-megamenu__link" href="#">
-                                                            Consultas médicas
-                                                        </a>
-                                                        <a class="col-megamenu__link" href="#">
-                                                            Consultas médicas menores de 15 años
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg col-megamenu">
-                                                <!-- Activador  -->
-                                                <a class="col-megamenu__title d-none" data-bs-toggle="collapse" href="#"></a>
-                                                <!-- Fin Activador -->
-                                                <div class="collapse" data-bs-parent="#collapseServiciosClinicos">
-                                                    <div class="card border-0">
-                                                        <a class="col-megamenu__link" href="#">
-                                                            Centro de reemplazo articular
-                                                        </a>
-                                                        <a class="col-megamenu__link" href="#">
-                                                            Centro de atención ambulatoria
-                                                        </a>
-                                                        <a class="col-megamenu__link" href="#">
-                                                            Consultas médicas
-                                                        </a>
-                                                        <a class="col-megamenu__link" href="#">
-                                                            Consultas médicas menores de 15 años
+                                                            Urgencia
                                                         </a>
                                                     </div>
                                                 </div>
@@ -380,19 +371,10 @@
                                                 <!-- Activador  -->
                                                 <a class="col-megamenu__title d-none" data-bs-toggle="collapse" href="#"></a>
                                                 <!-- Fin Activador -->
-                                                <div class="collapse" data-bs-parent="#collapseServiciosClinicos">
+                                                <div class="collapse show" data-bs-parent="#collapseServiciosClinicos">
                                                     <div class="card border-0">
                                                         <a class="col-megamenu__link" href="#">
-                                                            Centro de reemplazo articular
-                                                        </a>
-                                                        <a class="col-megamenu__link" href="#">
-                                                            Centro de atención ambulatoria
-                                                        </a>
-                                                        <a class="col-megamenu__link" href="#">
-                                                            Consultas médicas
-                                                        </a>
-                                                        <a class="col-megamenu__link" href="#">
-                                                            Consultas médicas menores de 15 años
+                                                            Vacunatorio
                                                         </a>
                                                     </div>
                                                 </div>
@@ -635,12 +617,54 @@
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link p-3" href="#">
+                                    <a class="nav-link nav-link-serviciosenlinea dropdown-toggle p-3" href="#" data-bs-toggle="dropdown">
                                         <figure class="d-inline mb-0">
-                                            <img class="d-lg-none" src="assets/images/ht/icon-warning.png" alt="">
+                                            <img class="d-lg-none" src="assets/images/ht/icon-workers.png" alt="">
                                         </figure>
-                                        En caso de accidente
+                                        Servicios en línea
+                                        <img class="ms-1" src="assets/images/ht/icon-chevron.png" alt="">
                                     </a>
+                                    <div id="collapseServiciosEnLinea" class="dropdown-menu dropdown-serviciosenlinea p-3 px-lg-3 py-lg-4" role="menu">
+                                        <div class="row d-flex justify-content-center justify-content-lg-start">
+                                            <div class="col-12 col-lg-3 col-megamenu">
+                                                <!-- Activador -->
+                                                <a class="col-megamenu__title d-none" data-bs-toggle="collapse" href="#submenuServiciosEnLinea"></a>
+                                                <!-- Fin Activador -->
+                                                <div class="collapse show" id="submenuServiciosEnLinea" data-bs-parent="#collapseServiciosEnLinea">
+                                                    <div class="card border-0">
+                                                        <a class="col-megamenu__link" href="#">
+                                                            Telemedicina o videoconsulta
+                                                        </a>
+                                                        <a class="col-megamenu__link" href="#">
+                                                            Presupuesto de cirugía
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-3 col-megamenu after-none">
+                                                <!-- Activador -->
+                                                <a class="col-megamenu__title d-none" data-bs-toggle="collapse" href="#submenuServiciosEnLinea2"></a>
+                                                <!-- Fin Activador -->
+                                                <div class="collapse show" id="submenuServiciosEnLinea2" data-bs-parent="#collapseServiciosEnLinea">
+                                                    <div class="card border-0">
+                                                        <a class="col-megamenu__link" href="#">
+                                                            Resultados de imagenología
+                                                        </a>
+                                                        <a class="col-megamenu__link" href="#">
+                                                            Resultados de laboratorio
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row pt-lg-4">
+                                            <div class="col-12">
+                                                <a class="col-megamenu__link col-megamenu__link-all d-block text-end text-lg-start py-3" href="#">
+                                                    Ir a Servicios en línea
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link nav-link-search dropdown-toggle p-3 d-none d-lg-flex" href="#" data-bs-toggle="dropdown" aria-expanded="false">
@@ -650,7 +674,7 @@
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-12 col-lg-10">
-                                                    <div class="input-group">
+                                                    <div class="input-group ms-2 ms-lg-0">
                                                         <img src="assets/images/ht/icon-search.png" alt="">
                                                         <input type="text" class="rounded w-100" placeholder="¿Qué estas buscando?">
                                                     </div>
@@ -685,7 +709,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="nav-item nav-item-reservarht">
+                                <li class="nav-item nav-item-reservarht pt-4 pt-lg-0">
                                     <a class="nav-link nav-link-reservarht rounded-pill text-center px-4 ms-lg-2" href="#">Reserva tu hora</a>
                                 </li>
                             </ul>
@@ -694,6 +718,7 @@
                 </nav>
             </div>
         </header>
+        <section></section>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
         <script>

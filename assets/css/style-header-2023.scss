@@ -76,7 +76,7 @@ body{
                                 transition: all .2s ease-in-out;
                                 &.show{
                                     background-color: #fff;
-                                    top: -57px;
+                                    top: -108px;
                                 }
                             }
                             &-serviciosenlinea{
@@ -84,7 +84,7 @@ body{
                                 transition: all .2s ease-in-out;
                                 &.show{
                                     background-color: #fff;
-                                    top: -57px;
+                                    top: -162px;
                                 }
                             }
                             &.dropdown-toggle{
@@ -250,6 +250,59 @@ body{
                         a{
                             strong{
                                 color: #348FFF !important;
+                            }
+                        }
+                    }
+                    .nav-link{
+                        &.dropdown-toggle{
+                            &.show{
+                                > img{
+                                    top: 40% !important;
+                                }
+                            }
+                        }
+                        ~ .dropdown-menu.dropdown-serviciosclinicos,
+                        ~ .dropdown-menu.dropdown-especialidades,
+                        ~ .dropdown-menu.dropdown-convenios,
+                        ~ .dropdown-menu.dropdown-serviciosenlinea{
+                            &.show{
+                                max-height: 480px;
+                                overflow: scroll;
+                                &::after{
+                                    opacity: .35;
+                                }
+                            }
+                            &::after{
+                                content: '<--------------------  Scroll  -------------------->';
+                                font-weight: 300;
+                                top: 130px;
+                                position: absolute;
+                                text-transform: uppercase;
+                                right: -116px;
+                                transform: rotate(-90deg);
+                                display: block;
+                                font-size: 14px;
+                                opacity: 0;
+                                width: max-content;
+                                height: max-content;
+                            }
+                            .col-megamenu{
+                                &__link{
+                                    &-all{
+                                        color: #348FFF;
+                                    }
+                                }
+                                &__title{
+                                    img{
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                        }
+                        ~ .dropdown-menu.dropdown-convenios,
+                        ~ .dropdown-menu.dropdown-serviciosenlinea{
+                            &::after{
+                                display: none !important;
                             }
                         }
                     }
@@ -921,7 +974,7 @@ body{
                             &::before{
                                 content: '';
                                 position: absolute;
-                                bottom: -13px;
+                                bottom: -14px;
                                 left: 0;
                                 width: 100%;
                                 background-color: #348FFF;
@@ -941,7 +994,8 @@ body{
                     }
                     ~ .dropdown-menu.dropdown-serviciosclinicos,
                     ~ .dropdown-menu.dropdown-especialidades,
-                    ~ .dropdown-menu.dropdown-convenios{
+                    ~ .dropdown-menu.dropdown-convenios,
+                    ~ .dropdown-menu.dropdown-serviciosenlinea{
                         left:0;
                         right:0;
                         width:100%;
@@ -1134,6 +1188,15 @@ body{
                         width: initial;
                         .modal-content{
                             border-radius: 0 0 8px 8px;
+                            ul{
+                                li{
+                                    a{
+                                        &:hover{
+                                            color: #13C045;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -1182,6 +1245,23 @@ body{
             }
         }
         &Servicios{
+            .modal-nosotros{
+                > .container{
+                    .modal-dialog{
+                        .modal-content{
+                            ul{
+                                li{
+                                    a{
+                                        &:hover{
+                                            color: #8C73FF;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             .modal-accesibilidad{
                 > .container{
                     .modal-dialog{
@@ -1198,6 +1278,23 @@ body{
             }
         }
         &Ht{
+            .modal-nosotros{
+                > .container{
+                    .modal-dialog{
+                        .modal-content{
+                            ul{
+                                li{
+                                    a{
+                                        &:hover{
+                                            color: #348FFF;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             .modal-accesibilidad{
                 > .container{
                     .modal-dialog{
@@ -1349,7 +1446,8 @@ body{
                 .nav-link{
                     ~ .dropdown-menu.dropdown-serviciosclinicos,
                     ~ .dropdown-menu.dropdown-especialidades,
-                    ~ .dropdown-menu.dropdown-convenios{
+                    ~ .dropdown-menu.dropdown-convenios,
+                    ~ .dropdown-menu.dropdown-serviciosenlinea{
                         .col-megamenu{
                             padding-left: 30px;
                             position: relative;
@@ -1403,7 +1501,7 @@ body{
                         &::before{
                             content: '';
                             position: absolute;
-                            bottom: -13px;
+                            bottom: -14px;
                             left: 0;
                             width: 100%;
                             background-color: #348FFF;
@@ -1414,6 +1512,12 @@ body{
                         &::before,
                         &::after{
                             top: -5px;
+                        }
+                    }
+                    ~ .dropdown-menu.dropdown-serviciosenlinea{
+                        &::before,
+                        &::after{
+                            top: 0px;
                         }
                     }
                     ~ .dropdown-menu.dropdown-search{
