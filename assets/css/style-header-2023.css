@@ -253,6 +253,7 @@ body section {
   .achsHeaderHt .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__link-all,
   .achsHeaderHt .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-serviciosenlinea .col-megamenu__link-all {
     color: #348FFF;
+    text-decoration: underline;
   }
   .achsHeaderHt .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-serviciosclinicos .col-megamenu__title img,
   .achsHeaderHt .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-especialidades .col-megamenu__title img,
@@ -952,7 +953,7 @@ body section {
     bottom: 0;
     left: 0;
     width: 40%;
-    background-color: #348FFF;
+    background-color: #7EFF45;
     height: 3px;
   }
   .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-serviciosclinicos .col-megamenu__title ~ .collapse:not(.show),
@@ -1107,6 +1108,10 @@ body section {
   }
   .achsHeader__top-bar-menus .modal-nosotros .modal-dialog .modal-content ul li a:hover {
     color: #13C045;
+  }
+  .achsHeader__top-bar-menus .modal-nosotros .modal-dialog::after {
+    left: 50%;
+    right: initial;
   }
   .achsHeaderCorporativo .modal-accesibilidad > .container, .achsHeaderServicios .modal-accesibilidad > .container, .achsHeaderHt .modal-accesibilidad > .container {
     height: 100%;
@@ -1309,6 +1314,12 @@ body section {
   .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-serviciosenlinea .col-megamenu__title ~ .collapse:not(.show) {
     display: block;
   }
+  .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-serviciosclinicos .col-megamenu__link,
+  .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-especialidades .col-megamenu__link,
+  .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__link,
+  .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-serviciosenlinea .col-megamenu__link {
+    padding: 2px;
+  }
   .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-serviciosclinicos .col-megamenu__link:hover,
   .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-especialidades .col-megamenu__link:hover,
   .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__link:hover,
@@ -1330,7 +1341,7 @@ body section {
   .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-serviciosenlinea::after {
     content: "";
     position: absolute;
-    top: -3px;
+    top: -2px;
     width: 100%;
     background-color: white;
     height: 102%;
@@ -1358,7 +1369,7 @@ body section {
     height: 3px;
   }
   .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-especialidades::before, .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-especialidades::after {
-    top: -5px;
+    top: -4px;
   }
   .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-serviciosenlinea::before, .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-serviciosenlinea::after {
     top: 0px;

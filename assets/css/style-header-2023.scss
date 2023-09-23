@@ -290,6 +290,7 @@ body{
                                 &__link{
                                     &-all{
                                         color: #348FFF;
+                                        text-decoration: underline;
                                     }
                                 }
                                 &__title{
@@ -1024,7 +1025,7 @@ body{
                                     bottom: 0;
                                     left: 0;
                                     width: 40%;
-                                    background-color: #348FFF;
+                                    background-color: #7EFF45;
                                     height: 3px;
                                 }
                                 ~ .collapse:not(.show) {
@@ -1197,6 +1198,10 @@ body{
                                     }
                                 }
                             }
+                        }
+                        &::after{
+                            left: 50%;
+                            right: initial;
                         }
                     }
                 }
@@ -1470,6 +1475,7 @@ body{
                                 }
                             }
                             &__link{
+                                padding: 2px;
                                 &:hover{
                                     color: #348FFF;
                                 }
@@ -1484,7 +1490,7 @@ body{
                         &::after{
                             content: '';
                             position: absolute;
-                            top: -3px;
+                            top: -2px;
                             width: 100%;
                             background-color: white;
                             height: 102%;
@@ -1511,7 +1517,7 @@ body{
                     ~ .dropdown-menu.dropdown-especialidades{
                         &::before,
                         &::after{
-                            top: -5px;
+                            top: -4px;
                         }
                     }
                     ~ .dropdown-menu.dropdown-serviciosenlinea{
