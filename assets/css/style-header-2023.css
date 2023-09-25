@@ -1150,6 +1150,9 @@ body section {
   .achsHeaderCorporativo .modal-accesibilidad > .container .modal-dialog .modal-content .toggle-advanced[aria-expanded=true] h5, .achsHeaderServicios .modal-accesibilidad > .container .modal-dialog .modal-content .toggle-advanced[aria-expanded=true] h5, .achsHeaderHt .modal-accesibilidad > .container .modal-dialog .modal-content .toggle-advanced[aria-expanded=true] h5 {
     display: block;
   }
+  .achsHeaderCorporativo .modal-nosotros .modal-dialog::after {
+    left: 70%;
+  }
   .achsHeaderServicios .modal-nosotros > .container .modal-dialog .modal-content ul li a:hover {
     color: #8C73FF;
   }

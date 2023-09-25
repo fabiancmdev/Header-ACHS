@@ -1250,6 +1250,15 @@ body{
                 }
             }
         }
+        &Corporativo{
+            .modal-nosotros{
+                .modal-dialog{
+                    &::after{
+                        left: 70%;
+                    }
+                }
+            }
+        }
         &Servicios{
             .modal-nosotros{
                 > .container{
