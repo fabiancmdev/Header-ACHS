@@ -285,6 +285,7 @@ body{
                                 opacity: 0;
                                 width: max-content;
                                 height: max-content;
+                                font-style: italic;
                             }
                             .col-megamenu{
                                 &__link{
@@ -1342,6 +1343,13 @@ body{
                                 }
                             }
                             &__link{
+                                &-all{
+                                    color: #13C045;
+                                    font-weight: bold;
+                                    &:hover{
+                                        text-decoration: underline;
+                                    }
+                                }
                                 &:hover{
                                     color: #13C045;
                                 }
@@ -1476,6 +1484,13 @@ body{
                             }
                             &__link{
                                 padding: 2px;
+                                &-all{
+                                    color: #348FFF;
+                                    font-weight: bold;
+                                    &:hover{
+                                        text-decoration: underline;
+                                    }
+                                }
                                 &:hover{
                                     color: #348FFF;
                                 }

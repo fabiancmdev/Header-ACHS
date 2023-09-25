@@ -247,6 +247,7 @@ body section {
     width: max-content;
     height: -moz-max-content;
     height: max-content;
+    font-style: italic;
   }
   .achsHeaderHt .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-serviciosclinicos .col-megamenu__link-all,
   .achsHeaderHt .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-especialidades .col-megamenu__link-all,
@@ -1187,6 +1188,15 @@ body section {
   .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu__title ~ .collapse:not(.show) {
     display: block;
   }
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__link-all,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu__link-all {
+    color: #13C045;
+    font-weight: bold;
+  }
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__link-all:hover,
+  .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu__link-all:hover {
+    text-decoration: underline;
+  }
   .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-trabajadores .col-megamenu__link:hover,
   .achsHeader__menu .navbar-achscl .nav-link ~ .dropdown-menu.dropdown-empresas .col-megamenu__link:hover {
     color: #13C045;
@@ -1319,6 +1329,19 @@ body section {
   .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__link,
   .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-serviciosenlinea .col-megamenu__link {
     padding: 2px;
+  }
+  .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-serviciosclinicos .col-megamenu__link-all,
+  .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-especialidades .col-megamenu__link-all,
+  .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__link-all,
+  .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-serviciosenlinea .col-megamenu__link-all {
+    color: #348FFF;
+    font-weight: bold;
+  }
+  .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-serviciosclinicos .col-megamenu__link-all:hover,
+  .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-especialidades .col-megamenu__link-all:hover,
+  .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__link-all:hover,
+  .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-serviciosenlinea .col-megamenu__link-all:hover {
+    text-decoration: underline;
   }
   .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-serviciosclinicos .col-megamenu__link:hover,
   .achsHeader__menu .navbar-ht .nav-link ~ .dropdown-menu.dropdown-especialidades .col-megamenu__link:hover,
