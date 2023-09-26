@@ -337,7 +337,7 @@ body{
                     color: #373737;
                     text-decoration: none;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: end;
                     flex-direction: row;
                     display: flex;
                     height: 100%;
@@ -651,7 +651,6 @@ body{
                 .nav-link{
                     color: rgba(55, 55, 55, 0.8);
                     font-size: 14px;
-                    text-transform: uppercase;
                     position: relative;
                     &-search{
                         display: flex;
@@ -744,7 +743,7 @@ body{
                             &__link{
                                 color: #666;
                                 font-size: 15px;
-                                padding: 5px 0;
+                                padding: 2px 0;
                             }
                         }
                     }
@@ -839,7 +838,6 @@ body{
                 .nav-link{
                     color: rgba(55, 55, 55, 0.8);
                     font-size: 14px;
-                    text-transform: uppercase;
                     position: relative;
                     &-search{
                         display: flex;
@@ -942,7 +940,6 @@ body{
                 .nav-link{
                     color: rgba(55, 55, 55, 0.8);
                     font-size: 14px;
-                    text-transform: uppercase;
                     position: relative;
                     &-search{
                         display: flex;
