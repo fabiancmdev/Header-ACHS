@@ -1,0 +1,948 @@
+@font-face {
+    font-family: 'AchsNuevaSansLight';
+    src: url('../fonts/ACHSNuevaSans-Light.woff2') format('woff2'),
+        url('../fonts/ACHSNuevaSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'AchsNuevaSansRegular';
+    src: url('../fonts/ACHSNuevaSans-Regular.woff2') format('woff2'),
+        url('../fonts/ACHSNuevaSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'AchsNuevaSansSemiBold';
+    src: url('../fonts/ACHSNuevaSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/ACHSNuevaSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'AchsNuevaSansBold';
+    src: url('../fonts/ACHSNuevaSans-Bold.woff2') format('woff2'),
+        url('../fonts/ACHSNuevaSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'AchsNuevaSerifMedium';
+    src: url('../fonts/ACHSNuevaSerif-Medium.woff2') format('woff2'),
+        url('../fonts/ACHSNuevaSerif-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'AchsNuevaSerifBold';
+    src: url('../fonts/ACHSNuevaSerif-Bold.woff2') format('woff2'),
+        url('../fonts/ACHSNuevaSerif-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+body{
+    overflow-x: hidden !important;
+    font-family: "AchsNuevaSansRegular" !important;
+    padding-right: 0 !important;
+    input,
+    button{
+        &:focus{
+            outline: none !important;
+            box-shadow: none !important;
+        }
+    }
+    section{
+        background-color: #ddd;
+        height: 90vh;
+    }
+    strong {
+        font-family: "AchsNuevaSansSemiBold" !important;
+    }
+}
+/******************************************
+**************** TOP BAR *****************
+*****************************************/
+.topButtonsAchs {
+    width: max-content;
+    border-bottom: 1px solid #f4f4f4;
+}
+.topButtonsAchs__btn {
+    color: #4e4e4e !important;
+    display: inline-block !important;
+    font-size: 15px;
+    font-family: "AchsNuevaSansRegular";
+    padding: 10px 15px;
+    position: relative;
+    text-decoration: none !important;
+    width: -moz-max-content !important;
+    width: max-content !important;
+}
+.topButtonsAchs__btn img {
+    margin-right: 10px;
+}
+.topButtonsAchs__btn.active, 
+.topButtonsAchs__btn:hover {
+    background-color: #f4f4f4;
+}
+.topButtonsAchs__btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+}
+.topButtonsAchs__btn.btn-achs:hover::after {
+    background-color: #13C045;
+}
+.topButtonsAchs__btn.btn-achs:hover {
+    color: #13C045;
+}
+.topButtonsAchs__btn.btn-salud.active::after,
+.topButtonsAchs__btn.btn-salud:hover::after {
+    background-color: #348fff;
+}
+.topButtonsAchs__btn.btn-salud:hover {
+    color: #348fff;
+}
+.topButtonsAchs__btn.btn-servicios:hover::after {
+    background-color: #7870B0;
+}
+.topButtonsAchs__btn.btn-servicios:hover {
+    color: #7870B0;
+}
+
+/* Máximo en mobile */
+@media (max-width: 991.98px){
+    .achsHeader{
+        &__top-bar{
+            &-menus{
+                .col-6{
+                    .btn{
+                        span{
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+                .col-contact {
+                    border-radius: 0 8px 8px 0;
+                    padding: 0;
+                    width: 50%;
+                }
+                .col-rescue,
+                .col-us {
+                    display: none;
+                }
+            }
+        }
+        &__menu{
+            .navbar-collapse{
+                padding: 15px;
+                position: absolute;
+                height: 100vh !important;
+                &:not(.show){
+                    left: 100%;
+                }
+                &.show{
+                    width: 100%;
+                    background-color: white;
+                    left: 0%;
+                    top: -44px;
+                }
+                .input-search-mobile{
+                    margin-top: 8px;
+                    margin-bottom: 16px;
+                    left: 93%;
+                    position: relative;
+                    z-index: 1001;
+                }
+                .nav-link-mobile-close{
+                    background-color: #fff;
+                }
+                .navbar-nav{
+                    .nav-item{
+                        border-bottom: 1px solid #eaeade;
+                        .nav-link{
+                            &-nuestra-red{
+                                top: 0;
+                                transition: all .2s ease-in-out;
+                                &.show{
+                                    background-color: #fff;
+                                    top: -57px;
+                                }
+                            }
+                            &-convenios{
+                                top: 0;
+                                transition: all .2s ease-in-out;
+                                &.show{
+                                    background-color: #fff;
+                                    top: -114px;
+                                }
+                            }
+                            &-conocenos{
+                                top: 0;
+                                transition: all .2s ease-in-out;
+                                &.show{
+                                    background-color: #fff;
+                                    top: -171px;
+                                }
+                            }
+                            &-sedes{
+                                top: 0;
+                                transition: all .2s ease-in-out;
+                                &.show{
+                                    background-color: #fff;
+                                    top: -228px;
+                                }
+                            }
+                            &.dropdown-toggle{
+                                transition: all .2s ease-in-out;
+                                &:not(.show){
+                                    left: 0px;
+                                }
+                                &.show{
+                                    font-weight: bold;
+                                    left: 15px;
+                                    &::before{
+                                        bottom: 0px;
+                                        height: 1px;
+                                        width: 110%;
+                                        left: -30px;
+                                        right: 0;
+                                        margin: auto;
+                                        background-color: #004C14;
+                                    }
+                                    > img{
+                                        transform: rotate(90deg);
+                                        position: absolute;
+                                        top: 45%;
+                                        left: -20px;
+                                    }
+                                }
+                            }
+                            ~ .dropdown-menu{
+                                border-bottom: 0;
+                                .col-megamenu{
+                                    &__title{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        padding: 10px 0 5px 0;
+                                        font-size: 17px;
+                                        &[aria-expanded="true"]{
+                                            img{
+                                                transform: rotate(180deg);
+                                            }
+                                        }
+                                        &::after{
+                                            display: none;
+                                        }
+                                    }
+                                    &__link{
+                                        font-size: 17px;
+                                        padding: 10px 0 10px 20px;
+                                        &-all{
+                                            color: #13C045;
+                                            font-weight: bold;
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                                &.dropdown-search{
+                                    display: block;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    background-color: transparent;
+                                    z-index: 9;
+                                }
+                                &.dropdown-infopacientes,
+                                &.dropdown-nuestra-red,
+                                &.dropdown-convenios,
+                                &.dropdown-conocenos,
+                                &.dropdown-sedes{
+                                    position: absolute;
+                                    width: 95%;
+                                    left: 100%;
+                                    top: 147px;
+                                    display: block;
+                                    &.show{
+                                        left: 15px;
+                                        
+                                    }
+                                }
+                            }
+                        }
+                        &-reservarsalud{
+                            display: none;
+                            position: absolute;
+                            padding: 15px 0;
+                            bottom: 0;
+                            width: 90%;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                            text-align: center;
+                            font-weight: bold;
+                            z-index: 1001;
+                            background-color: white;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                margin: auto;
+                                height: 1px;
+                                background-color: #4e4e4e;
+                                width: 80px;
+                            }
+                        }
+                        &-buttons-contact{
+                            border-top: 2px solid #7EFF45;
+                            border-bottom: none;
+                            position: absolute;
+                            bottom: 80px;
+                            width: 100%;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                            padding: 0 22px;
+                            z-index: 1001;
+                            background-color: white;
+                            h5{
+                                color: #4e4e4e;
+                                font-weight: bold;
+                            }
+                            a{  
+                                color: #373737;
+                                text-decoration: none;
+                                display: flex;
+                                align-items: center;
+                                flex-direction: column;
+                                text-align: center;
+                                img{
+                                    height: 18px;
+                                    margin-bottom: 10px;
+                                }
+                                strong{
+                                    color: #13C045;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &Salud{
+            .achsHeader__menu{
+                .btn-mobile-reservarsalud {
+                    background-color: #2B6BDC;
+                    color: white;
+                    font-family: "AchsNuevaSansSemiBold";
+                    text-decoration: none;
+                }
+                .nav-item{
+                    &-buttons-contact{
+                        border-top: 2px solid #348FFF !important;
+                        a{
+                            strong{
+                                color: #348FFF !important;
+                            }
+                        }
+                    }
+                    .nav-link{
+                        ~ .dropdown-menu.dropdown-infopacientes,
+                        ~ .dropdown-menu.dropdown-nuestra-red,
+                        ~ .dropdown-menu.dropdown-convenios,
+                        ~ .dropdown-menu.dropdown-conocenos,
+                        ~ .dropdown-menu.dropdown-sedes {
+                            &.show{
+                                max-height: 480px;
+                                min-height: 250px;
+                                overflow: scroll;
+                                &::after{
+                                    opacity: .35;
+                                }
+                            }
+                            .col-megamenu{
+                                &__link{
+                                    &-all{
+                                        color: #348FFF;
+                                        text-decoration: underline;
+                                    }
+                                }
+                                &__title{
+                                    img{
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                        }
+                        ~ .dropdown-menu.dropdown-convenios,
+                        ~ .dropdown-menu.dropdown-conocenos{
+                            &::after{
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* Mínimo 200px */
+@media (min-width: 200px) {
+    .achsHeader{
+        *{
+            transition: all .2s ease-in-out;
+        }
+        &__top-bar{
+            &-menus{
+                button:not(.btn-close){
+                    color: #555;
+                    border: none;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &:active{
+                        border: none;
+                    }
+                }
+                :not(.dropdown){
+                    a{
+                        color: #373737;
+                        text-decoration: none;
+                        align-items: center;
+                        flex-direction: row;
+                        display: flex;
+                        height: 100%;
+                        img{
+                            height: 18px;
+                            margin-right: 4px;
+                        }
+                        strong{
+                            margin-left: 4px;
+                        }
+                    }
+                }
+                .dropdown {
+                    .btn-nosotros,
+                    .btn-contacto {
+                        &.show {
+                            background-color: #EAF3FE;
+                            color: #348FFF;
+                            > img{
+                                transform: rotate(180deg);
+                            }
+                        }
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    .dropdown-menu {
+                        box-shadow: 0 0 8px 0 rgba(55, 55, 55, 0.1);
+                        .dropdown-item {
+                            &:hover {
+                                color: #348FFF;
+                            }
+                        }
+                    }
+                }
+                .col-accessibility {
+                    .btn {
+                        border-radius: 8px;
+                        &:hover {
+                            background-color: #EAF3FE;
+                        }
+                    }
+                }
+            }
+        }
+        &Salud{
+            .achsHeader__menu{
+                .navbar-toggler{
+                    background-color: #348FFF;
+                }
+            }
+            .modal-accesibilidad{
+                > .container{
+                    max-width: 400px;
+                    .modal-dialog{
+                        top: 50px;
+                        &::after{
+                            content: '';
+                            width: 30px;
+                            height: 22px;
+                            position: absolute;
+                            right: 22px;
+                            top: -22px;
+                            background-color: #fff;
+                            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                        }
+                        .modal-content{
+                            border-radius: 24px;
+                            border-top-right-radius: 0;
+                            .btn-close {
+                                position: absolute;
+                                right: 25px;
+                                top: 10px;
+                                z-index: 10;
+                            }
+                        }
+                    }
+                }
+                h5{
+                    color: var(--bs-gray);
+                }
+                button:not(.btn-close){
+                    background-color: transparent;
+                    border: 3px solid #5e5e5e;
+                    border-radius: 8px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    width: 100%;
+                    span{
+                        letter-spacing: 1px;
+                    }
+                    &:hover{
+                        border-color: #348FFF;
+                        h5,
+                        figure,
+                        span{
+                            color: #348FFF;
+                            svg{
+                                circle,
+                                path,
+                                polygon,
+                                rect{
+                                    fill: #348FFF;
+                                }
+                            }
+                        }
+                    }
+                }
+                &__lowContrast,
+                &__highContrast,
+                &__btnAdvanced{
+                    figure{
+                        svg{
+                            width: 24px;
+                            &.w-16{
+                                width: 16px;
+                            }
+                            circle,
+                            path,
+                            polygon,
+                            rect{
+                                fill: #5e5e5e;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__menu{
+            .navbar-toggler{
+                border: 0;
+                background-color: #fff !important;
+            }
+            .navbar-salud{
+                .nav-link{
+                    color: rgba(55, 55, 55, 0.8);
+                    font-size: 16px;
+                    position: relative;
+                    &-search{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 40px;
+                        height: 50px;
+                        border-radius: 8px;
+                        &.show{
+                            background-color: #EAF3FE;
+                            &::before{
+                                display: none;
+                            }
+                            img{
+                                transform: none !important;
+                            }
+                        }
+                    }
+                    &-search,
+                    &-reservarsalud{
+                        &:hover{
+                            &::before{
+                                display: none;
+                            }
+                        }
+                    }
+                    &.dropdown-toggle{
+                        border-radius: 8px;
+                        &.show{
+                            color: #348FFF;
+                            > img{
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                    &.dropdown-toggle,
+                    &-search{
+                        &::after{
+                            display: none;
+                        }
+                    }
+                    ~ .dropdown-menu.dropdown-infopacientes,
+                    ~ .dropdown-menu.dropdown-nuestra-red,
+                    ~ .dropdown-menu.dropdown-convenios,
+                    ~ .dropdown-menu.dropdown-conocenos,
+                    ~ .dropdown-menu.dropdown-sedes{
+                        left:0;
+                        right:0;
+                        width:100%;
+                        margin-top:0;
+                        border: none;
+                        border-bottom: 3px solid #348FFF;
+                        border-radius: 0;
+                        a{
+                            text-decoration: none;
+                        }
+                        .col-megamenu{
+                            padding-left: 0;
+                            position: relative;
+                            a{
+                                position: relative;
+                            }
+                            &__title{
+                                display: block;
+                                color: #002A6C;
+                                font-weight: 600;
+                                margin-bottom: 10px;
+                                padding: 5px 0;
+                                &::after{
+                                    content: '';
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 40%;
+                                    background-color: #7EFF45;
+                                    height: 3px;
+                                }
+                                ~ .collapse:not(.show) {
+                                    display: none;
+                                }
+                            }
+                            &__link{
+                                color: #666;
+                                font-size: 15px;
+                                padding: 5px 0;
+                            }
+                        }
+                    }
+                    ~ .dropdown-menu.dropdown-search{
+                        border: none;
+                        border-radius: 0;
+                        width: 100%;
+                        margin: 0;
+                        .input-group{
+                            background-color: #e4ecf7;
+                            border-radius: 8px;
+                            overflow: hidden;
+                            margin-right: 15px;
+                            width: 90%;
+                            input{
+                                background-color: transparent;
+                                border: 2px solid #d7d7d7;
+                                &:focus {
+                                    box-shadow: none;
+                                    outline: 0;
+                                }
+                            }
+                        }
+                        button{
+                            background-color: #2B6BDC;
+                            border: none;
+                            box-shadow: 2px 2px 10px 0 rgba(40,40,40,0.4);
+                            color: #ffffff;
+                            font-family: "AchsNuevaSansSemiBold";
+                            font-size: 18px;
+                            &:hover{
+                                background-color: #348FFF;
+                            }
+                        }
+                        &::before,
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            width: 100%;
+                            background-color: white;
+                            height: 100%;
+                        }
+                        &::before{
+                            right: -100%;
+                        }
+                        &::after{
+                            left: -100%;
+                        }
+                    }
+                    &-reservarsalud{
+                        color: white;
+                        background-color: #2B6BDC;
+                        border: 2px solid #2B6BDC;
+                        font-family: 'AchsNuevaSansSemiBold';
+                        &:hover{
+                            background-color: #348FFF;
+                            border-color: #348FFF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .offcanvas-ingreso,
+    .dropdown-menu.dropdown-ingresa{
+        h6{
+            color: #4e4e4e;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        .nav-link{
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            &-virtual{
+                background-color: #13C045;
+                border: 2px solid #13C045;
+                color: white;
+            }
+            &-gestion{
+                background-color: white;
+                border: 2px solid #27933E;
+                color: #27933E;
+                &:hover{
+                    img{
+                        filter: brightness(200);
+                    }
+                }
+            }
+            &:hover{
+                &::before{
+                    display: none;
+                }
+            }
+            img{
+                vertical-align: -5px;
+            }
+            &:hover{
+                background-color: #004C14;
+                border-color: #004C14;
+                color: white;
+            }
+        }
+    }
+}
+/* Entra 576px y 992px */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .achsHeader{
+        &__menu{
+            .navbar-collapse{
+                &.show{
+                    &::before,
+                    &::after{
+                        content: '';
+                        background-color: white;
+                        width: 100%;
+                        height: 100vh;
+                        top: 0;
+                        position: absolute;
+                        z-index: 1000;
+                    }
+                    &::before{
+                        left: -100%;
+                    }
+                    &::after{
+                        right: -100%;
+                    }
+                }
+            }
+        }
+    }
+}
+/* Mínimo 992px*/
+@media (min-width: 992px) {
+    .achsHeader{
+        &__top-bar{
+            &-menus{
+                button {
+                    &.btn-close {
+                        top: 18px !important;
+                    }
+                    &:not(.btn-close){
+                        width: max-content;
+                    }
+                }
+            }
+        }
+        &Salud{
+            .modal-accesibilidad{
+                > .container{
+                    height: 100%;
+                    max-width: 450px;
+                    h5{
+                        font-size: 16px;
+                    }
+                    .modal-dialog{
+                        top: initial;
+                        &::after{
+                            display: none;
+                        }
+                        .modal-content{
+                            border-top-right-radius: 24px;
+                            .toggle-advanced{
+                                font-family: "AchsNuevaSansSemiBold";
+                                height: initial;
+                                h6,
+                                h5{
+                                    color: #13C045;
+                                    font-weight: bold;
+                                    text-decoration: underline;
+                                }
+                                h5{
+                                    display: none;
+                                }
+                                &[aria-expanded="true"]{
+                                    h6{
+                                        display: none;
+                                    }
+                                    h5{
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &Salud{
+            .modal-accesibilidad{
+                > .container{
+                    .modal-dialog{
+                        .modal-content{
+                            .toggle-advanced{
+                                h6,
+                                h5{
+                                    color: #348FFF !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__menu{
+            .navbar-salud{
+                .nav-link{
+                    &.dropdown-toggle {
+                        &.show {
+                            background-color: #EAF3FE;
+                        }
+                    }
+                    ~ .dropdown-menu.dropdown-infopacientes,
+                    ~ .dropdown-menu.dropdown-nuestra-red,
+                    ~ .dropdown-menu.dropdown-convenios,
+                    ~ .dropdown-menu.dropdown-conocenos,
+                    ~ .dropdown-menu.dropdown-sedes{
+                        .col-megamenu{
+                            padding-left: 30px;
+                            position: relative;
+                            &__title{
+                                pointer-events: none;
+                                ~ .collapse:not(.show) {
+                                    display: block;
+                                }
+                            }
+                            &__link{
+                                padding: 2px;
+                                &-all{
+                                    color: #348FFF;
+                                    font-weight: bold;
+                                    &:hover{
+                                        text-decoration: underline;
+                                    }
+                                }
+                                &:hover{
+                                    color: #348FFF;
+                                }
+                            }
+                            &.after-none{
+                                &::after{
+                                    display: none;
+                                }
+                            }
+                        }
+                        &::before,
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: -2px;
+                            width: 100%;
+                            background-color: white;
+                            height: 102%;
+                            border-bottom: 3px solid #348FFF;
+                        }
+                        &::before{
+                            right: 100%;
+                        }
+                        &::after{
+                            left: 100%;
+                        }
+                    }
+                    &:not(.rounded-pill):hover{
+                        color: #348FFF;
+                    }
+                    ~ .dropdown-menu.dropdown-nuestra-red{
+                        &::before,
+                        &::after{
+                            top: -3px;
+                        }
+                    }
+                    ~ .dropdown-menu.dropdown-conocenos{
+                        &::before,
+                        &::after{
+                            top: -1px;
+                        }
+                    }
+                    ~ .dropdown-menu.dropdown-sedes{
+                        &::before,
+                        &::after{
+                            top: -1px;
+                        }
+                    }
+                    ~ .dropdown-menu.dropdown-search{
+                        background-color: #D6E5F9;
+                        margin-top: 8px;
+                        .input-group{
+                            background-color: white;
+                            width: 100%;
+                        }
+                        &::after,
+                        &::before{
+                            background-color: #D6E5F9;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

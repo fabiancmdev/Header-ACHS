@@ -1,0 +1,910 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "AchsNuevaSansLight";
+  src: url("../fonts/ACHSNuevaSans-Light.woff2") format("woff2"), url("../fonts/ACHSNuevaSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AchsNuevaSansRegular";
+  src: url("../fonts/ACHSNuevaSans-Regular.woff2") format("woff2"), url("../fonts/ACHSNuevaSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AchsNuevaSansSemiBold";
+  src: url("../fonts/ACHSNuevaSans-SemiBold.woff2") format("woff2"), url("../fonts/ACHSNuevaSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AchsNuevaSansBold";
+  src: url("../fonts/ACHSNuevaSans-Bold.woff2") format("woff2"), url("../fonts/ACHSNuevaSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AchsNuevaSerifMedium";
+  src: url("../fonts/ACHSNuevaSerif-Medium.woff2") format("woff2"), url("../fonts/ACHSNuevaSerif-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AchsNuevaSerifBold";
+  src: url("../fonts/ACHSNuevaSerif-Bold.woff2") format("woff2"), url("../fonts/ACHSNuevaSerif-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  overflow-x: hidden !important;
+  font-family: "AchsNuevaSansRegular" !important;
+  padding-right: 0 !important;
+}
+body input:focus,
+body button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+body section {
+  background-color: #ddd;
+  height: 90vh;
+}
+body strong {
+  font-family: "AchsNuevaSansSemiBold" !important;
+}
+
+/******************************************
+**************** TOP BAR *****************
+*****************************************/
+.topButtonsAchs {
+  width: -moz-max-content;
+  width: max-content;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.topButtonsAchs__btn {
+  color: #4e4e4e !important;
+  display: inline-block !important;
+  font-size: 15px;
+  font-family: "AchsNuevaSansRegular";
+  padding: 10px 15px;
+  position: relative;
+  text-decoration: none !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+}
+
+.topButtonsAchs__btn img {
+  margin-right: 10px;
+}
+
+.topButtonsAchs__btn.active,
+.topButtonsAchs__btn:hover {
+  background-color: #f4f4f4;
+}
+
+.topButtonsAchs__btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+}
+
+.topButtonsAchs__btn.btn-achs:hover::after {
+  background-color: #13C045;
+}
+
+.topButtonsAchs__btn.btn-achs:hover {
+  color: #13C045;
+}
+
+.topButtonsAchs__btn.btn-salud.active::after,
+.topButtonsAchs__btn.btn-salud:hover::after {
+  background-color: #348fff;
+}
+
+.topButtonsAchs__btn.btn-salud:hover {
+  color: #348fff;
+}
+
+.topButtonsAchs__btn.btn-servicios:hover::after {
+  background-color: #7870B0;
+}
+
+.topButtonsAchs__btn.btn-servicios:hover {
+  color: #7870B0;
+}
+
+/* Máximo en mobile */
+@media (max-width: 991.98px) {
+  .achsHeader__top-bar-menus .col-6 .btn span {
+    text-transform: uppercase;
+  }
+  .achsHeader__top-bar-menus .col-contact {
+    border-radius: 0 8px 8px 0;
+    padding: 0;
+    width: 50%;
+  }
+  .achsHeader__top-bar-menus .col-rescue,
+  .achsHeader__top-bar-menus .col-us {
+    display: none;
+  }
+  .achsHeader__menu .navbar-collapse {
+    padding: 15px;
+    position: absolute;
+    height: 100vh !important;
+  }
+  .achsHeader__menu .navbar-collapse:not(.show) {
+    left: 100%;
+  }
+  .achsHeader__menu .navbar-collapse.show {
+    width: 100%;
+    background-color: white;
+    left: 0%;
+    top: -44px;
+  }
+  .achsHeader__menu .navbar-collapse .input-search-mobile {
+    margin-top: 8px;
+    margin-bottom: 16px;
+    left: 93%;
+    position: relative;
+    z-index: 1001;
+  }
+  .achsHeader__menu .navbar-collapse .nav-link-mobile-close {
+    background-color: #fff;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item {
+    border-bottom: 1px solid #eaeade;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link-nuestra-red {
+    top: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link-nuestra-red.show {
+    background-color: #fff;
+    top: -57px;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link-convenios {
+    top: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link-convenios.show {
+    background-color: #fff;
+    top: -114px;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link-conocenos {
+    top: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link-conocenos.show {
+    background-color: #fff;
+    top: -171px;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link-sedes {
+    top: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link-sedes.show {
+    background-color: #fff;
+    top: -228px;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link.dropdown-toggle {
+    transition: all 0.2s ease-in-out;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link.dropdown-toggle:not(.show) {
+    left: 0px;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link.dropdown-toggle.show {
+    font-weight: bold;
+    left: 15px;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link.dropdown-toggle.show::before {
+    bottom: 0px;
+    height: 1px;
+    width: 110%;
+    left: -30px;
+    right: 0;
+    margin: auto;
+    background-color: #004C14;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link.dropdown-toggle.show > img {
+    transform: rotate(90deg);
+    position: absolute;
+    top: 45%;
+    left: -20px;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu {
+    border-bottom: 0;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu .col-megamenu__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 5px 0;
+    font-size: 17px;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu .col-megamenu__title[aria-expanded=true] img {
+    transform: rotate(180deg);
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu .col-megamenu__title::after {
+    display: none;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu .col-megamenu__link {
+    font-size: 17px;
+    padding: 10px 0 10px 20px;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu .col-megamenu__link-all {
+    color: #13C045;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-search {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 9;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-infopacientes, .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-nuestra-red, .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-convenios, .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-conocenos, .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-sedes {
+    position: absolute;
+    width: 95%;
+    left: 100%;
+    top: 147px;
+    display: block;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-infopacientes.show, .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-nuestra-red.show, .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-convenios.show, .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-conocenos.show, .achsHeader__menu .navbar-collapse .navbar-nav .nav-item .nav-link ~ .dropdown-menu.dropdown-sedes.show {
+    left: 15px;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item-reservarsalud {
+    display: none;
+    position: absolute;
+    padding: 15px 0;
+    bottom: 0;
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    z-index: 1001;
+    background-color: white;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item-reservarsalud::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    background-color: #4e4e4e;
+    width: 80px;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item-buttons-contact {
+    border-top: 2px solid #7EFF45;
+    border-bottom: none;
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0 22px;
+    z-index: 1001;
+    background-color: white;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item-buttons-contact h5 {
+    color: #4e4e4e;
+    font-weight: bold;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item-buttons-contact a {
+    color: #373737;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item-buttons-contact a img {
+    height: 18px;
+    margin-bottom: 10px;
+  }
+  .achsHeader__menu .navbar-collapse .navbar-nav .nav-item-buttons-contact a strong {
+    color: #13C045;
+    text-decoration: underline;
+  }
+  .achsHeaderSalud .achsHeader__menu .btn-mobile-reservarsalud {
+    background-color: #2B6BDC;
+    color: white;
+    font-family: "AchsNuevaSansSemiBold";
+    text-decoration: none;
+  }
+  .achsHeaderSalud .achsHeader__menu .nav-item-buttons-contact {
+    border-top: 2px solid #348FFF !important;
+  }
+  .achsHeaderSalud .achsHeader__menu .nav-item-buttons-contact a strong {
+    color: #348FFF !important;
+  }
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-infopacientes.show,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-nuestra-red.show,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-convenios.show,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-conocenos.show,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-sedes.show {
+    max-height: 480px;
+    min-height: 250px;
+    overflow: scroll;
+  }
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-infopacientes.show::after,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-nuestra-red.show::after,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-convenios.show::after,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-conocenos.show::after,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-sedes.show::after {
+    opacity: 0.35;
+  }
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-infopacientes .col-megamenu__link-all,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-nuestra-red .col-megamenu__link-all,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__link-all,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-conocenos .col-megamenu__link-all,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-sedes .col-megamenu__link-all {
+    color: #348FFF;
+    text-decoration: underline;
+  }
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-infopacientes .col-megamenu__title img,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-nuestra-red .col-megamenu__title img,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__title img,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-conocenos .col-megamenu__title img,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-sedes .col-megamenu__title img {
+    margin-right: 10px;
+  }
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-convenios::after,
+  .achsHeaderSalud .achsHeader__menu .nav-item .nav-link ~ .dropdown-menu.dropdown-conocenos::after {
+    display: none !important;
+  }
+}
+/* Mínimo 200px */
+@media (min-width: 200px) {
+  .achsHeader * {
+    transition: all 0.2s ease-in-out;
+  }
+  .achsHeader__top-bar-menus button:not(.btn-close) {
+    color: #555;
+    border: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .achsHeader__top-bar-menus button:not(.btn-close):active {
+    border: none;
+  }
+  .achsHeader__top-bar-menus :not(.dropdown) a {
+    color: #373737;
+    text-decoration: none;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    height: 100%;
+  }
+  .achsHeader__top-bar-menus :not(.dropdown) a img {
+    height: 18px;
+    margin-right: 4px;
+  }
+  .achsHeader__top-bar-menus :not(.dropdown) a strong {
+    margin-left: 4px;
+  }
+  .achsHeader__top-bar-menus .dropdown .btn-nosotros.show,
+  .achsHeader__top-bar-menus .dropdown .btn-contacto.show {
+    background-color: #EAF3FE;
+    color: #348FFF;
+  }
+  .achsHeader__top-bar-menus .dropdown .btn-nosotros.show > img,
+  .achsHeader__top-bar-menus .dropdown .btn-contacto.show > img {
+    transform: rotate(180deg);
+  }
+  .achsHeader__top-bar-menus .dropdown .btn-nosotros::after,
+  .achsHeader__top-bar-menus .dropdown .btn-contacto::after {
+    display: none;
+  }
+  .achsHeader__top-bar-menus .dropdown .dropdown-menu {
+    box-shadow: 0 0 8px 0 rgba(55, 55, 55, 0.1);
+  }
+  .achsHeader__top-bar-menus .dropdown .dropdown-menu .dropdown-item:hover {
+    color: #348FFF;
+  }
+  .achsHeader__top-bar-menus .col-accessibility .btn {
+    border-radius: 8px;
+  }
+  .achsHeader__top-bar-menus .col-accessibility .btn:hover {
+    background-color: #EAF3FE;
+  }
+  .achsHeaderSalud .achsHeader__menu .navbar-toggler {
+    background-color: #348FFF;
+  }
+  .achsHeaderSalud .modal-accesibilidad > .container {
+    max-width: 400px;
+  }
+  .achsHeaderSalud .modal-accesibilidad > .container .modal-dialog {
+    top: 50px;
+  }
+  .achsHeaderSalud .modal-accesibilidad > .container .modal-dialog::after {
+    content: "";
+    width: 30px;
+    height: 22px;
+    position: absolute;
+    right: 22px;
+    top: -22px;
+    background-color: #fff;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  .achsHeaderSalud .modal-accesibilidad > .container .modal-dialog .modal-content {
+    border-radius: 24px;
+    border-top-right-radius: 0;
+  }
+  .achsHeaderSalud .modal-accesibilidad > .container .modal-dialog .modal-content .btn-close {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    z-index: 10;
+  }
+  .achsHeaderSalud .modal-accesibilidad h5 {
+    color: var(--bs-gray);
+  }
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close) {
+    background-color: transparent;
+    border: 3px solid #5e5e5e;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close) span {
+    letter-spacing: 1px;
+  }
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close):hover {
+    border-color: #348FFF;
+  }
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close):hover h5,
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close):hover figure,
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close):hover span {
+    color: #348FFF;
+  }
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close):hover h5 svg circle,
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close):hover h5 svg path,
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close):hover h5 svg polygon,
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close):hover h5 svg rect,
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close):hover figure svg circle,
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close):hover figure svg path,
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close):hover figure svg polygon,
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close):hover figure svg rect,
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close):hover span svg circle,
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close):hover span svg path,
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close):hover span svg polygon,
+  .achsHeaderSalud .modal-accesibilidad button:not(.btn-close):hover span svg rect {
+    fill: #348FFF;
+  }
+  .achsHeaderSalud .modal-accesibilidad__lowContrast figure svg, .achsHeaderSalud .modal-accesibilidad__highContrast figure svg, .achsHeaderSalud .modal-accesibilidad__btnAdvanced figure svg {
+    width: 24px;
+  }
+  .achsHeaderSalud .modal-accesibilidad__lowContrast figure svg.w-16, .achsHeaderSalud .modal-accesibilidad__highContrast figure svg.w-16, .achsHeaderSalud .modal-accesibilidad__btnAdvanced figure svg.w-16 {
+    width: 16px;
+  }
+  .achsHeaderSalud .modal-accesibilidad__lowContrast figure svg circle,
+  .achsHeaderSalud .modal-accesibilidad__lowContrast figure svg path,
+  .achsHeaderSalud .modal-accesibilidad__lowContrast figure svg polygon,
+  .achsHeaderSalud .modal-accesibilidad__lowContrast figure svg rect, .achsHeaderSalud .modal-accesibilidad__highContrast figure svg circle,
+  .achsHeaderSalud .modal-accesibilidad__highContrast figure svg path,
+  .achsHeaderSalud .modal-accesibilidad__highContrast figure svg polygon,
+  .achsHeaderSalud .modal-accesibilidad__highContrast figure svg rect, .achsHeaderSalud .modal-accesibilidad__btnAdvanced figure svg circle,
+  .achsHeaderSalud .modal-accesibilidad__btnAdvanced figure svg path,
+  .achsHeaderSalud .modal-accesibilidad__btnAdvanced figure svg polygon,
+  .achsHeaderSalud .modal-accesibilidad__btnAdvanced figure svg rect {
+    fill: #5e5e5e;
+  }
+  .achsHeader__menu .navbar-toggler {
+    border: 0;
+    background-color: #fff !important;
+  }
+  .achsHeader__menu .navbar-salud .nav-link {
+    color: rgba(55, 55, 55, 0.8);
+    font-size: 16px;
+    position: relative;
+  }
+  .achsHeader__menu .navbar-salud .nav-link-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 50px;
+    border-radius: 8px;
+  }
+  .achsHeader__menu .navbar-salud .nav-link-search.show {
+    background-color: #EAF3FE;
+  }
+  .achsHeader__menu .navbar-salud .nav-link-search.show::before {
+    display: none;
+  }
+  .achsHeader__menu .navbar-salud .nav-link-search.show img {
+    transform: none !important;
+  }
+  .achsHeader__menu .navbar-salud .nav-link-search:hover::before, .achsHeader__menu .navbar-salud .nav-link-reservarsalud:hover::before {
+    display: none;
+  }
+  .achsHeader__menu .navbar-salud .nav-link.dropdown-toggle {
+    border-radius: 8px;
+  }
+  .achsHeader__menu .navbar-salud .nav-link.dropdown-toggle.show {
+    color: #348FFF;
+  }
+  .achsHeader__menu .navbar-salud .nav-link.dropdown-toggle.show > img {
+    transform: rotate(180deg);
+  }
+  .achsHeader__menu .navbar-salud .nav-link.dropdown-toggle::after, .achsHeader__menu .navbar-salud .nav-link-search::after {
+    display: none;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes {
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 0;
+    border: none;
+    border-bottom: 3px solid #348FFF;
+    border-radius: 0;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes a,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red a,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios a,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos a,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes a {
+    text-decoration: none;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes .col-megamenu,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red .col-megamenu,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos .col-megamenu,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes .col-megamenu {
+    padding-left: 0;
+    position: relative;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes .col-megamenu a,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red .col-megamenu a,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu a,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos .col-megamenu a,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes .col-megamenu a {
+    position: relative;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes .col-megamenu__title,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red .col-megamenu__title,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__title,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos .col-megamenu__title,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes .col-megamenu__title {
+    display: block;
+    color: #002A6C;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding: 5px 0;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes .col-megamenu__title::after,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red .col-megamenu__title::after,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__title::after,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos .col-megamenu__title::after,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes .col-megamenu__title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    background-color: #7EFF45;
+    height: 3px;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes .col-megamenu__title ~ .collapse:not(.show),
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red .col-megamenu__title ~ .collapse:not(.show),
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__title ~ .collapse:not(.show),
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos .col-megamenu__title ~ .collapse:not(.show),
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes .col-megamenu__title ~ .collapse:not(.show) {
+    display: none;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes .col-megamenu__link,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red .col-megamenu__link,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__link,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos .col-megamenu__link,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes .col-megamenu__link {
+    color: #666;
+    font-size: 15px;
+    padding: 5px 0;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search {
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    margin: 0;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search .input-group {
+    background-color: #e4ecf7;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 15px;
+    width: 90%;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search .input-group input {
+    background-color: transparent;
+    border: 2px solid #d7d7d7;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search .input-group input:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search button {
+    background-color: #2B6BDC;
+    border: none;
+    box-shadow: 2px 2px 10px 0 rgba(40, 40, 40, 0.4);
+    color: #ffffff;
+    font-family: "AchsNuevaSansSemiBold";
+    font-size: 18px;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search button:hover {
+    background-color: #348FFF;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search::before, .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    height: 100%;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search::before {
+    right: -100%;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search::after {
+    left: -100%;
+  }
+  .achsHeader__menu .navbar-salud .nav-link-reservarsalud {
+    color: white;
+    background-color: #2B6BDC;
+    border: 2px solid #2B6BDC;
+    font-family: "AchsNuevaSansSemiBold";
+  }
+  .achsHeader__menu .navbar-salud .nav-link-reservarsalud:hover {
+    background-color: #348FFF;
+    border-color: #348FFF;
+  }
+  .offcanvas-ingreso h6,
+  .dropdown-menu.dropdown-ingresa h6 {
+    color: #4e4e4e;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .offcanvas-ingreso .nav-link,
+  .dropdown-menu.dropdown-ingresa .nav-link {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+  }
+  .offcanvas-ingreso .nav-link-virtual,
+  .dropdown-menu.dropdown-ingresa .nav-link-virtual {
+    background-color: #13C045;
+    border: 2px solid #13C045;
+    color: white;
+  }
+  .offcanvas-ingreso .nav-link-gestion,
+  .dropdown-menu.dropdown-ingresa .nav-link-gestion {
+    background-color: white;
+    border: 2px solid #27933E;
+    color: #27933E;
+  }
+  .offcanvas-ingreso .nav-link-gestion:hover img,
+  .dropdown-menu.dropdown-ingresa .nav-link-gestion:hover img {
+    filter: brightness(200);
+  }
+  .offcanvas-ingreso .nav-link:hover::before,
+  .dropdown-menu.dropdown-ingresa .nav-link:hover::before {
+    display: none;
+  }
+  .offcanvas-ingreso .nav-link img,
+  .dropdown-menu.dropdown-ingresa .nav-link img {
+    vertical-align: -5px;
+  }
+  .offcanvas-ingreso .nav-link:hover,
+  .dropdown-menu.dropdown-ingresa .nav-link:hover {
+    background-color: #004C14;
+    border-color: #004C14;
+    color: white;
+  }
+}
+/* Entra 576px y 992px */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .achsHeader__menu .navbar-collapse.show::before, .achsHeader__menu .navbar-collapse.show::after {
+    content: "";
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    position: absolute;
+    z-index: 1000;
+  }
+  .achsHeader__menu .navbar-collapse.show::before {
+    left: -100%;
+  }
+  .achsHeader__menu .navbar-collapse.show::after {
+    right: -100%;
+  }
+}
+/* Mínimo 992px*/
+@media (min-width: 992px) {
+  .achsHeader__top-bar-menus button.btn-close {
+    top: 18px !important;
+  }
+  .achsHeader__top-bar-menus button:not(.btn-close) {
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .achsHeaderSalud .modal-accesibilidad > .container {
+    height: 100%;
+    max-width: 450px;
+  }
+  .achsHeaderSalud .modal-accesibilidad > .container h5 {
+    font-size: 16px;
+  }
+  .achsHeaderSalud .modal-accesibilidad > .container .modal-dialog {
+    top: initial;
+  }
+  .achsHeaderSalud .modal-accesibilidad > .container .modal-dialog::after {
+    display: none;
+  }
+  .achsHeaderSalud .modal-accesibilidad > .container .modal-dialog .modal-content {
+    border-top-right-radius: 24px;
+  }
+  .achsHeaderSalud .modal-accesibilidad > .container .modal-dialog .modal-content .toggle-advanced {
+    font-family: "AchsNuevaSansSemiBold";
+    height: initial;
+  }
+  .achsHeaderSalud .modal-accesibilidad > .container .modal-dialog .modal-content .toggle-advanced h6,
+  .achsHeaderSalud .modal-accesibilidad > .container .modal-dialog .modal-content .toggle-advanced h5 {
+    color: #13C045;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .achsHeaderSalud .modal-accesibilidad > .container .modal-dialog .modal-content .toggle-advanced h5 {
+    display: none;
+  }
+  .achsHeaderSalud .modal-accesibilidad > .container .modal-dialog .modal-content .toggle-advanced[aria-expanded=true] h6 {
+    display: none;
+  }
+  .achsHeaderSalud .modal-accesibilidad > .container .modal-dialog .modal-content .toggle-advanced[aria-expanded=true] h5 {
+    display: block;
+  }
+  .achsHeaderSalud .modal-accesibilidad > .container .modal-dialog .modal-content .toggle-advanced h6,
+  .achsHeaderSalud .modal-accesibilidad > .container .modal-dialog .modal-content .toggle-advanced h5 {
+    color: #348FFF !important;
+  }
+  .achsHeader__menu .navbar-salud .nav-link.dropdown-toggle.show {
+    background-color: #EAF3FE;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes .col-megamenu,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red .col-megamenu,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos .col-megamenu,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes .col-megamenu {
+    padding-left: 30px;
+    position: relative;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes .col-megamenu__title,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red .col-megamenu__title,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__title,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos .col-megamenu__title,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes .col-megamenu__title {
+    pointer-events: none;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes .col-megamenu__title ~ .collapse:not(.show),
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red .col-megamenu__title ~ .collapse:not(.show),
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__title ~ .collapse:not(.show),
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos .col-megamenu__title ~ .collapse:not(.show),
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes .col-megamenu__title ~ .collapse:not(.show) {
+    display: block;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes .col-megamenu__link,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red .col-megamenu__link,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__link,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos .col-megamenu__link,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes .col-megamenu__link {
+    padding: 2px;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes .col-megamenu__link-all,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red .col-megamenu__link-all,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__link-all,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos .col-megamenu__link-all,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes .col-megamenu__link-all {
+    color: #348FFF;
+    font-weight: bold;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes .col-megamenu__link-all:hover,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red .col-megamenu__link-all:hover,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__link-all:hover,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos .col-megamenu__link-all:hover,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes .col-megamenu__link-all:hover {
+    text-decoration: underline;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes .col-megamenu__link:hover,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red .col-megamenu__link:hover,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu__link:hover,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos .col-megamenu__link:hover,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes .col-megamenu__link:hover {
+    color: #348FFF;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes .col-megamenu.after-none::after,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red .col-megamenu.after-none::after,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios .col-megamenu.after-none::after,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos .col-megamenu.after-none::after,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes .col-megamenu.after-none::after {
+    display: none;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes::before, .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes::after,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red::before,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red::after,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios::before,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios::after,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos::before,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos::after,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes::before,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    width: 100%;
+    background-color: white;
+    height: 102%;
+    border-bottom: 3px solid #348FFF;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes::before,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red::before,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios::before,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos::before,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes::before {
+    right: 100%;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes::after,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red::after,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-convenios::after,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos::after,
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes::after {
+    left: 100%;
+  }
+  .achsHeader__menu .navbar-salud .nav-link:not(.rounded-pill):hover {
+    color: #348FFF;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red::before, .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red::after {
+    top: -3px;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos::before, .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos::after {
+    top: -1px;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes::before, .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes::after {
+    top: -1px;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search {
+    background-color: #D6E5F9;
+    margin-top: 8px;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search .input-group {
+    background-color: white;
+    width: 100%;
+  }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search::after, .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search::before {
+    background-color: #D6E5F9;
+  }
+}/*# sourceMappingURL=style-header-2024.css.map */
