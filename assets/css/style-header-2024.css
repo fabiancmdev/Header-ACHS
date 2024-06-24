@@ -635,7 +635,7 @@ body strong {
   }
   .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search .input-group {
     background-color: #e4ecf7;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     margin-right: 15px;
     width: 90%;
@@ -643,6 +643,7 @@ body strong {
   .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search .input-group input {
     background-color: transparent;
     border: 2px solid #d7d7d7;
+    border-radius: 12px 0 0 12px;
   }
   .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-search .input-group input:focus {
     box-shadow: none;

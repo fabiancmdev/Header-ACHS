@@ -655,13 +655,14 @@ body{
                         margin: 0;
                         .input-group{
                             background-color: #e4ecf7;
-                            border-radius: 8px;
+                            border-radius: 12px;
                             overflow: hidden;
                             margin-right: 15px;
                             width: 90%;
                             input{
                                 background-color: transparent;
                                 border: 2px solid #d7d7d7;
+                                border-radius: 12px 0 0 12px;
                                 &:focus {
                                     box-shadow: none;
                                     outline: 0;
