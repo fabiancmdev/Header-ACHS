@@ -59,7 +59,7 @@ body{
     }
     section{
         background-color: #ddd;
-        height: 90vh;
+        height: 80vh;
     }
     strong {
         font-family: "AchsNuevaSansSemiBold" !important;
@@ -120,6 +120,25 @@ body{
 
 /* Máximo en mobile */
 @media (max-width: 991.98px){
+    footer {
+        .row {
+            &-columns {
+                .col-links {
+                    border: 2px solid #D6E5F9;
+                    border-radius: 8px;
+                    padding: 15px;
+                }
+            }
+            &-copyright {
+                div, p {
+                    width: 100% !important;
+                }
+                .col-rrss {
+                    justify-content: center;
+                }
+            }
+        }
+    }
     .achsHeader{
         &__top-bar{
             &-menus{
@@ -400,6 +419,69 @@ body{
 }
 /* Mínimo 200px */
 @media (min-width: 200px) {
+    footer {
+        background-color: #2B6BDC;
+        border-bottom: 16px solid #002A6C;
+        color: white;
+        h5 {
+            font-family: 'AchsNuevaSerifBold';
+        }
+        .col-info {
+            a {
+                color: white;
+                display: block;
+                padding-left: 25px;
+                position: relative;
+                text-decoration: none;
+                img {
+                    height: 20px;
+                    left: 0;
+                    position: absolute;
+                    top: 2px;
+                    width: 20px;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .row {
+            &-columns {
+                border-bottom: 2px solid #348FFF;
+                ul {
+                    list-style: none;
+                    padding: 0 0 0 10px;
+                    margin-bottom: 0;
+                    li {
+                        margin-bottom: 15px;
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+            &-copyright {
+                div {
+                    display: flex;
+                    width: max-content;
+                    a {
+                        display: inline-block;
+                        img {
+                            height: 28px;
+                            width: 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .achsHeader{
         *{
             transition: all .2s ease-in-out;
@@ -781,6 +863,18 @@ body{
 }
 /* Mínimo 992px*/
 @media (min-width: 992px) {
+    footer {
+        .row {
+            &-columns {
+                h5 {
+                    pointer-events: none;
+                }
+                .collapse:not(.show) {
+                    display: block;
+                }
+            }
+        }
+    }
     .achsHeader{
         &__top-bar{
             &-menus{
