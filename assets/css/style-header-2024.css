@@ -391,6 +391,7 @@ body strong {
   footer h5 {
     font-family: "AchsNuevaSerifBold";
   }
+  footer .collapseClinicas a,
   footer .col-info a {
     color: white;
     display: block;
@@ -398,6 +399,7 @@ body strong {
     position: relative;
     text-decoration: none;
   }
+  footer .collapseClinicas a img,
   footer .col-info a img {
     height: 20px;
     left: 0;
@@ -405,6 +407,8 @@ body strong {
     top: 2px;
     width: 20px;
   }
+  footer .collapseClinicas a span, footer .collapseClinicas a:hover,
+  footer .col-info a span,
   footer .col-info a:hover {
     text-decoration: underline;
   }
@@ -428,6 +432,36 @@ body strong {
   }
   footer .row-columns ul li:last-child {
     margin-bottom: 0;
+  }
+  footer .row-columns .collapseClinicasH5 img,
+  footer .row-columns .collapseDenunciasA img {
+    display: inline-block;
+    width: 14px;
+    height: 9px;
+    transition: all 0.2s ease-in-out;
+  }
+  footer .row-columns .collapseClinicasH5[aria-expanded=true] img,
+  footer .row-columns .collapseDenunciasA[aria-expanded=true] img {
+    transform: rotate(180deg);
+  }
+  footer .row-columns .collapseDenuncias ul li {
+    position: relative;
+  }
+  footer .row-columns .collapseDenuncias ul li::before {
+    content: "";
+    border-radius: 10px;
+    border: 1px solid white;
+    height: 10px;
+    left: -20px;
+    position: absolute;
+    top: 7px;
+    width: 10px;
+  }
+  footer .row-columns .collapseDenuncias ul li.dot-achs::before {
+    background: #13C045;
+  }
+  footer .row-columns .collapseDenuncias ul li.dot-servicios::before {
+    background: #7870B0;
   }
   footer .row-copyright div {
     display: flex;
@@ -816,10 +850,10 @@ body strong {
 }
 /* Mínimo 992px*/
 @media (min-width: 992px) {
-  footer .row-columns h5 {
+  footer .row-columns h5:not(.collapseClinicasH5) {
     pointer-events: none;
   }
-  footer .row-columns .collapse:not(.show) {
+  footer .row-columns .collapse:not(.show, .collapseClinicas, .collapseDenuncias) {
     display: block;
   }
   .achsHeader__top-bar-menus button.btn-close {

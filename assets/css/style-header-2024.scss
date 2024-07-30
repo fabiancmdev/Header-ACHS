@@ -426,6 +426,7 @@ body{
         h5 {
             font-family: 'AchsNuevaSerifBold';
         }
+        .collapseClinicas,
         .col-info {
             a {
                 color: white;
@@ -440,6 +441,7 @@ body{
                     top: 2px;
                     width: 20px;
                 }
+                span,
                 &:hover {
                     text-decoration: underline;
                 }
@@ -463,6 +465,47 @@ body{
                         }
                         &:last-child {
                             margin-bottom: 0;
+                        }
+                    }
+                }
+                .collapseClinicasH5,
+                .collapseDenunciasA {
+                    img {
+                        display: inline-block;
+                        width: 14px;
+                        height: 9px;
+                        transition: all .2s ease-in-out;
+                    }
+                    &[aria-expanded="true"] {
+                        img{
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+                .collapseDenuncias {
+                    ul {
+                        li {
+                            position: relative;
+                            &::before {
+                                content: '';
+                                border-radius: 10px;
+                                border: 1px solid white;
+                                height: 10px;
+                                left: -20px;
+                                position: absolute;
+                                top: 7px;
+                                width: 10px;
+                            }
+                            &.dot-achs {
+                                &::before {
+                                    background: #13C045;
+                                }
+                            }
+                            &.dot-servicios {
+                                &::before {
+                                    background: #7870B0;
+                                }
+                            }
                         }
                     }
                 }
@@ -866,10 +909,10 @@ body{
     footer {
         .row {
             &-columns {
-                h5 {
+                h5:not(.collapseClinicasH5) {
                     pointer-events: none;
                 }
-                .collapse:not(.show) {
+                .collapse:not(.show, .collapseClinicas, .collapseDenuncias) {
                     display: block;
                 }
             }
