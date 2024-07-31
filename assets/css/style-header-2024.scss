@@ -485,26 +485,8 @@ body{
                 .collapseDenuncias {
                     ul {
                         li {
-                            position: relative;
-                            &::before {
-                                content: '';
-                                border-radius: 10px;
-                                border: 1px solid white;
-                                height: 10px;
-                                left: -20px;
-                                position: absolute;
-                                top: 7px;
-                                width: 10px;
-                            }
-                            &.dot-achs {
-                                &::before {
-                                    background: #13C045;
-                                }
-                            }
-                            &.dot-servicios {
-                                &::before {
-                                    background: #7870B0;
-                                }
+                            &.hdtas {
+                                letter-spacing: -.5px;
                             }
                         }
                     }

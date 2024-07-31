@@ -444,24 +444,8 @@ body strong {
   footer .row-columns .collapseDenunciasA[aria-expanded=true] img {
     transform: rotate(180deg);
   }
-  footer .row-columns .collapseDenuncias ul li {
-    position: relative;
-  }
-  footer .row-columns .collapseDenuncias ul li::before {
-    content: "";
-    border-radius: 10px;
-    border: 1px solid white;
-    height: 10px;
-    left: -20px;
-    position: absolute;
-    top: 7px;
-    width: 10px;
-  }
-  footer .row-columns .collapseDenuncias ul li.dot-achs::before {
-    background: #13C045;
-  }
-  footer .row-columns .collapseDenuncias ul li.dot-servicios::before {
-    background: #7870B0;
+  footer .row-columns .collapseDenuncias ul li.hdtas {
+    letter-spacing: -0.5px;
   }
   footer .row-copyright div {
     display: flex;
