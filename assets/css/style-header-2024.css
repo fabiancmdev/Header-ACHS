@@ -389,9 +389,17 @@ body strong {
     color: white;
   }
   footer h5 {
-    font-family: "AchsNuevaSerifBold";
+    font-family: "AchsNuevaSerifMedium";
+  }
+  footer button {
+    border: 0;
+    background: transparent;
+    color: white;
+    padding: 0;
   }
   footer .collapseClinicas a,
+  footer .collapseHt a,
+  footer .collapseCentros a,
   footer .col-info a {
     color: white;
     display: block;
@@ -400,6 +408,8 @@ body strong {
     text-decoration: none;
   }
   footer .collapseClinicas a img,
+  footer .collapseHt a img,
+  footer .collapseCentros a img,
   footer .col-info a img {
     height: 20px;
     left: 0;
@@ -408,6 +418,10 @@ body strong {
     width: 20px;
   }
   footer .collapseClinicas a span, footer .collapseClinicas a:hover,
+  footer .collapseHt a span,
+  footer .collapseHt a:hover,
+  footer .collapseCentros a span,
+  footer .collapseCentros a:hover,
   footer .col-info a span,
   footer .col-info a:hover {
     text-decoration: underline;
@@ -433,16 +447,29 @@ body strong {
   footer .row-columns ul li:last-child {
     margin-bottom: 0;
   }
-  footer .row-columns .collapseClinicasH5 img,
+  footer .row-columns .collapseClinicasBtn,
+  footer .row-columns .collapseHtBtn,
+  footer .row-columns .collapseCentrosBtn,
+  footer .row-columns .collapseDenunciasA {
+    display: block;
+  }
+  footer .row-columns .collapseClinicasBtn img,
+  footer .row-columns .collapseHtBtn img,
+  footer .row-columns .collapseCentrosBtn img,
   footer .row-columns .collapseDenunciasA img {
     display: inline-block;
     width: 14px;
     height: 9px;
     transition: all 0.2s ease-in-out;
   }
-  footer .row-columns .collapseClinicasH5[aria-expanded=true] img,
+  footer .row-columns .collapseClinicasBtn[aria-expanded=true] img,
+  footer .row-columns .collapseHtBtn[aria-expanded=true] img,
+  footer .row-columns .collapseCentrosBtn[aria-expanded=true] img,
   footer .row-columns .collapseDenunciasA[aria-expanded=true] img {
     transform: rotate(180deg);
+  }
+  footer .row-columns .col-links ul li a {
+    display: block;
   }
   footer .row-columns .collapseDenuncias ul li.hdtas {
     letter-spacing: -0.5px;
@@ -837,8 +864,11 @@ body strong {
   footer .row-columns h5:not(.collapseClinicasH5) {
     pointer-events: none;
   }
-  footer .row-columns .collapse:not(.show, .collapseClinicas, .collapseDenuncias) {
+  footer .row-columns .collapse:not(.show, .collapseClinicas, .collapseHt, .collapseCentros, .collapseDenuncias) {
     display: block;
+  }
+  footer .row-columns .col-links ul li a {
+    margin-bottom: 18px;
   }
   .achsHeader__top-bar-menus button.btn-close {
     top: 18px !important;

@@ -424,9 +424,17 @@ body{
         border-bottom: 16px solid #002A6C;
         color: white;
         h5 {
-            font-family: 'AchsNuevaSerifBold';
+            font-family: 'AchsNuevaSerifMedium';
+        }
+        button {
+            border: 0;
+            background: transparent;
+            color: white;
+            padding: 0;
         }
         .collapseClinicas,
+        .collapseHt,
+        .collapseCentros,
         .col-info {
             a {
                 color: white;
@@ -468,8 +476,11 @@ body{
                         }
                     }
                 }
-                .collapseClinicasH5,
+                .collapseClinicasBtn,
+                .collapseHtBtn,
+                .collapseCentrosBtn,
                 .collapseDenunciasA {
+                    display: block;
                     img {
                         display: inline-block;
                         width: 14px;
@@ -479,6 +490,15 @@ body{
                     &[aria-expanded="true"] {
                         img{
                             transform: rotate(180deg);
+                        }
+                    }
+                }
+                .col-links {
+                    ul {
+                        li {
+                            a {
+                                display: block;
+                            }
                         }
                     }
                 }
@@ -894,8 +914,17 @@ body{
                 h5:not(.collapseClinicasH5) {
                     pointer-events: none;
                 }
-                .collapse:not(.show, .collapseClinicas, .collapseDenuncias) {
+                .collapse:not(.show, .collapseClinicas, .collapseHt, .collapseCentros, .collapseDenuncias) {
                     display: block;
+                }
+                .col-links {
+                    ul {
+                        li {
+                            a {
+                                margin-bottom: 18px;
+                            }
+                        }
+                    }
                 }
             }
         }
