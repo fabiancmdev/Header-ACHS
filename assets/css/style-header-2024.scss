@@ -559,6 +559,11 @@ body{
                         strong{
                             margin-left: 4px;
                         }
+                        &.dropdown-toggle {
+                            img {
+                                height: 8px;
+                            }
+                        }
                     }
                 }
                 .dropdown {
