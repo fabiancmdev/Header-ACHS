@@ -1065,16 +1065,22 @@ body{
                     &:not(.rounded-pill):hover{
                         color: #348FFF;
                     }
+                    ~ .dropdown-menu.dropdown-infopacientes{
+                        &::before,
+                        &::after{
+                            top: 2px;
+                        }
+                    }
                     ~ .dropdown-menu.dropdown-nuestra-red{
                         &::before,
                         &::after{
-                            top: -3px;
+                            top: -5px;
                         }
                     }
                     ~ .dropdown-menu.dropdown-conocenos{
                         &::before,
                         &::after{
-                            top: -1px;
+                            top: 1px;
                         }
                     }
                     ~ .dropdown-menu.dropdown-sedes{

@@ -1014,11 +1014,14 @@ body strong {
   .achsHeader__menu .navbar-salud .nav-link:not(.rounded-pill):hover {
     color: #348FFF;
   }
+  .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes::before, .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-infopacientes::after {
+    top: 2px;
+  }
   .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red::before, .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-nuestra-red::after {
-    top: -3px;
+    top: -5px;
   }
   .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos::before, .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-conocenos::after {
-    top: -1px;
+    top: 1px;
   }
   .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes::before, .achsHeader__menu .navbar-salud .nav-link ~ .dropdown-menu.dropdown-sedes::after {
     top: -1px;
